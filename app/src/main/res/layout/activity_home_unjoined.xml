@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_home_unjoined">
+    tools:context=".ActivityHomeUnjoined">
 
     <!-- Page Title: Application Name -->
     <TextView
@@ -45,6 +45,7 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:minLines="2"
+                android:onClick="startShareGroup"
                 android:text="@string/button_text_start"
                 android:textSize="22sp"
                 app:icon="@drawable/ic_baseline_play_arrow_24"
@@ -63,6 +64,7 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:minLines="2"
+                android:onClick="joinShareGroup"
                 android:text="@string/button_text_join"
                 android:textSize="22sp"
                 app:icon="@drawable/ic_baseline_add_24"
@@ -102,7 +104,6 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:minLines="2"
-                android:onClick="openSettings"
                 android:text="@string/button_text_settings"
                 android:textSize="22sp"
                 app:icon="@drawable/ic_baseline_settings_24"

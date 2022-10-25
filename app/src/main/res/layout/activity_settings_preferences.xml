@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivitySettingsPreferences">
+
+    <!-- Page Title: Settings Subpage -->
+    <TextView
+        android:id="@+id/settings_subpage_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_text_settings_preferences"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <!-- Button Layout (Settings - Preferences) -->
+    <LinearLayout
+        android:id="@+id/layout_button_table"
+        android:layout_width="383dp"
+        android:layout_height="573dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Button Layout - Row 1 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp">
+
+            <!--  Button -->
+            <Button
+                android:id="@+id/button_update_email"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:minLines="2"
+                android:text="@string/button_text_settings_update_email"
+                android:textSize="22sp"
+                app:icon="@drawable/ic_baseline_email_24"
+                app:iconGravity="textTop"
+                app:iconSize="75dp" />
+
+        </TableRow>
+
+        <!-- Button Layout - Row 2 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp">
+
+            <!--  Button -->
+            <Button
+                android:id="@+id/button_update_password"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:minLines="2"
+                android:text="@string/button_text_settings_update_password"
+                android:textSize="22sp"
+                app:icon="@drawable/ic_baseline_password_24"
+                app:iconGravity="textTop"
+                app:iconSize="75dp" />
+
+        </TableRow>
+
+        <!-- Button Layout - Row 3 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp">
+
+            <!--  Button -->
+            <Button
+                android:id="@+id/button_logout"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:minLines="2"
+                android:text="@string/button_text_settings_logout"
+                android:textSize="22sp"
+                app:icon="@drawable/ic_baseline_logout_24"
+                app:iconGravity="textTop"
+                app:iconSize="75dp" />
+        </TableRow>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

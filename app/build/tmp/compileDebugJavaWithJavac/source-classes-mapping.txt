@@ -1,7 +1,25 @@
+com/example/photoshare/ActivitySettingsPreferences.java
+ com.example.photoshare.ActivitySettingsPreferences
+com/example/photoshare/ActivityTimelineSpecified.java
+ com.example.photoshare.ActivityTimelineSpecified
 com/example/photoshare/BuildConfig.java
  com.example.photoshare.BuildConfig
-com/example/photoshare/activity_settings_home.java
- com.example.photoshare.activity_settings_home
-com/example/photoshare/activity_home_unjoined.java
- com.example.photoshare.activity_home_unjoined
- com.example.photoshare.activity_home_unjoined$1
+com/example/photoshare/ActivityTimelineHome.java
+ com.example.photoshare.ActivityTimelineHome
+com/example/photoshare/ActivitySettingsNotifications.java
+ com.example.photoshare.ActivitySettingsNotifications
+com/example/photoshare/ActivitySettingsProfile.java
+ com.example.photoshare.ActivitySettingsProfile
+com/example/photoshare/ActivityHomeUnjoined.java
+ com.example.photoshare.ActivityHomeUnjoined
+ com.example.photoshare.ActivityHomeUnjoined$1
+ com.example.photoshare.ActivityHomeUnjoined$2
+com/example/photoshare/ActivitySettingsHome.java
+ com.example.photoshare.ActivitySettingsHome
+ com.example.photoshare.ActivitySettingsHome$1
+ com.example.photoshare.ActivitySettingsHome$2
+ com.example.photoshare.ActivitySettingsHome$3
+com/example/photoshare/ActivityHomeJoined.java
+ com.example.photoshare.ActivityHomeJoined
+ com.example.photoshare.ActivityHomeJoined$1
+ com.example.photoshare.ActivityHomeJoined$2

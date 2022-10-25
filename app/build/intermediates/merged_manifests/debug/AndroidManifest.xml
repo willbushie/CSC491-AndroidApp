@@ -19,14 +19,20 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.PhotoShare" >
-        <activity android:name="com.example.photoshare.activity_home_unjoined" >
+        <activity android:name="com.example.photoshare.ActivityHomeUnjoined" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.photoshare.activity_settings_home" />
+        <activity android:name="com.example.photoshare.ActivitySettingsHome" />
+        <activity android:name="com.example.photoshare.ActivitySettingsProfile" />
+        <activity android:name="com.example.photoshare.ActivitySettingsNotifications" />
+        <activity android:name="com.example.photoshare.ActivityTimelineHome" />
+        <activity android:name="com.example.photoshare.ActivitySettingsPreferences" />
+        <activity android:name="com.example.photoshare.ActivityHomeJoined" />
+        <activity android:name="com.example.photoshare.ActivityTimelineSpecified" />
     </application>
 
 </manifest>

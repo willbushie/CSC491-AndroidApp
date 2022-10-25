@@ -9,14 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PhotoShare">
-        <activity android:name=".activity_home_unjoined">
+
+
+        <activity android:name=".ActivityHomeUnjoined">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity_settings_home" />
+        <activity android:name=".ActivitySettingsHome" />
+        <activity android:name=".ActivitySettingsProfile" />
+        <activity android:name=".ActivitySettingsNotifications" />
+        <activity android:name=".ActivityTimelineHome" />
+        <activity android:name=".ActivitySettingsPreferences" />
+        <activity android:name=".ActivityHomeJoined" />
+        <activity android:name=".ActivityTimelineSpecified" />
+
+
     </application>
 
 </manifest>
