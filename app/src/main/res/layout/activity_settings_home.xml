@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_main_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+    <!-- Page Name -->
+    <TextView
+        android:id="@+id/text_app_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_text"
+        android:textColor="@color/text"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/table_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <!-- Settings Options Table Layout -->
+    <TableLayout
+        android:id="@+id/table_layout"
+        android:layout_width="363dp"
+        android:layout_height="305dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Table Layout: Row 1 -->
+        <TableRow
+            android:id="@+id/table_layout_row_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingTop="12dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="24dp">
+
+            <!-- Profile Button -->
+            <Button
+                android:id="@+id/button_profile"
+                android:layout_width="275dp"
+                android:layout_height="130dp"
+                android:backgroundTint="@color/button"
+                android:gravity="center"
+                android:minLines="2"
+                android:paddingLeft="13dp"
+                android:paddingTop="16dp"
+                android:paddingRight="13dp"
+                android:paddingBottom="8dp"
+                android:text="@string/profile_text"
+                android:textAlignment="gravity"
+                android:textColor="@color/icon"
+                android:textSize="20sp"
+                android:onClick="openProfileSettings"
+                app:icon="@drawable/ic_baseline_person_24"
+                app:iconGravity="top"
+                app:iconPadding="0dp"
+                app:iconSize="50dp"
+                app:iconTint="@color/icon" />
+
+        </TableRow>
+
+        <!-- Table Layout: Row 2 -->
+        <TableRow
+            android:id="@+id/table_layout_row_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingTop="24dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="12dp">
+
+            <!-- Notifications Button -->
+            <Button
+                android:id="@+id/button_notifications"
+                android:layout_width="275dp"
+                android:layout_height="130dp"
+                android:backgroundTint="@color/button"
+                android:gravity="center"
+                android:minLines="2"
+                android:paddingLeft="13dp"
+                android:paddingTop="16dp"
+                android:paddingRight="13dp"
+                android:paddingBottom="8dp"
+                android:text="@string/notifications_text"
+                android:textAlignment="gravity"
+                android:textColor="@color/icon"
+                android:textSize="20sp"
+                android:onClick="openNotificationsSettings"
+                app:icon="@drawable/ic_baseline_notifications_24"
+                app:iconGravity="top"
+                app:iconPadding="0dp"
+                app:iconSize="50dp"
+                app:iconTint="@color/icon" />
+
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

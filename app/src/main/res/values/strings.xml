@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">PhotoShare</string>
+    <string name="share_text">Share</string>
+    <string name="leave_text">Leave</string>
+    <string name="timeline_text">Timeline</string>
+    <string name="settings_text">Settings</string>
+    <string name="edit_text">Edit</string>
+    <string name="pause_text">Pause</string>
+    <string name="photoshare_text">PhotoShare</string>
+    <string name="start_text">Start</string>
+    <string name="join_text">Join</string>
+    <string name="profile_text">Profile</string>
+    <string name="notifications_text">Notifications</string>
+    <string name="all_notifications_text">All Notifications</string>
+    <string name="update_email">Update Email</string>
+    <string name="update_password">Update Password</string>
+    <string name="logout">Logout</string>
 </resources>
