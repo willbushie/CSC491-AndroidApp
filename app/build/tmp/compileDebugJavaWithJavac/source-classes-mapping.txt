@@ -1,0 +1,7 @@
+com/example/photoshare/BuildConfig.java
+ com.example.photoshare.BuildConfig
+com/example/photoshare/activity_settings_home.java
+ com.example.photoshare.activity_settings_home
+com/example/photoshare/activity_home_unjoined.java
+ com.example.photoshare.activity_home_unjoined
+ com.example.photoshare.activity_home_unjoined$1
