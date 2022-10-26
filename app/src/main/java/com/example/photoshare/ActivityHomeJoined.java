@@ -22,9 +22,21 @@ public class ActivityHomeJoined extends AppCompatActivity {
         This is only for buttons that require OnClickListeners.
          */
 
+        // Initialze Leave Button
+        // MODIFY THIS TO BRING UP A MENU FIRST TO CONFIRM, THEN CONDUCT THE ACTION
+        Button button_leave = (Button)findViewById(R.id.button_leave);
+        button_leave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ActivityHomeJoined.this, ActivityHomeUnjoined.class));
+                onStop();
+            }
+        });
+
         // Initialize Timeline Button
-        Button open_all_timeline_view = (Button)findViewById(R.id.button_timeline);
-        open_all_timeline_view.setOnClickListener(new View.OnClickListener() {
+        // MODIFY THIS TO OPEN TO THE CURRENT GROUP SHARE TIMELINE PAGE (does not currently exist)
+        Button open_current_timeline_view = (Button)findViewById(R.id.button_timeline);
+        open_current_timeline_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ActivityHomeJoined.this, ActivityTimelineHome.class));
@@ -46,15 +58,19 @@ public class ActivityHomeJoined extends AppCompatActivity {
         This will begin a new share group.
         This action is conducted when button_start is tapped.
          */
-        Button button_start = (Button)findViewById(R.id.button_start);
+        Button button_share = (Button)findViewById(R.id.button_share);
+
     }
 
     public void leaveShareGroup(View v) {
         /*
         This will join a share group.
         This action is conducted when button_join is tapped.
+
+        This button, since it will begin a new activity, needs to be initialized prior.
+        Button functionality (this method) will still work onClick.
          */
-        Button button_join = (Button)findViewById(R.id.button_join);
+
     }
 
     public void editShareGroup(View v) {
@@ -63,6 +79,7 @@ public class ActivityHomeJoined extends AppCompatActivity {
         This action is conducted when button_edit is tapped.
          */
         Button button_edit = (Button)findViewById(R.id.button_edit);
+
     }
 
     public void pauseShareGroup(View v) {
@@ -71,6 +88,7 @@ public class ActivityHomeJoined extends AppCompatActivity {
         This action is conducted when button_pause is tapped.
          */
         Button button_pause = (Button)findViewById(R.id.button_pause);
+
     }
 
 }

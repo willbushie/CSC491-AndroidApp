@@ -19,20 +19,43 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.PhotoShare" >
-        <activity android:name="com.example.photoshare.ActivityHomeUnjoined" >
+        <activity
+            android:name="com.example.photoshare.ActivityHomeUnjoined"
+            android:launchMode="singleInstance" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.photoshare.ActivitySettingsHome" />
-        <activity android:name="com.example.photoshare.ActivitySettingsProfile" />
-        <activity android:name="com.example.photoshare.ActivitySettingsNotifications" />
-        <activity android:name="com.example.photoshare.ActivityTimelineHome" />
-        <activity android:name="com.example.photoshare.ActivitySettingsPreferences" />
-        <activity android:name="com.example.photoshare.ActivityHomeJoined" />
-        <activity android:name="com.example.photoshare.ActivityTimelineSpecified" />
+        <activity
+            android:name="com.example.photoshare.ActivitySettingsHome"
+            android:launchMode="singleInstance" >
+        </activity>
+        <activity
+            android:name="com.example.photoshare.ActivitySettingsProfile"
+            android:launchMode="singleInstance" >
+        </activity>
+        <activity
+            android:name="com.example.photoshare.ActivitySettingsNotifications"
+            android:launchMode="singleInstance" >
+        </activity>
+        <activity
+            android:name="com.example.photoshare.ActivityTimelineHome"
+            android:launchMode="singleInstance" >
+        </activity>
+        <activity
+            android:name="com.example.photoshare.ActivitySettingsPreferences"
+            android:launchMode="singleInstance" >
+        </activity>
+        <activity
+            android:name="com.example.photoshare.ActivityHomeJoined"
+            android:launchMode="singleInstance" >
+        </activity>
+        <activity
+            android:name="com.example.photoshare.ActivityTimelineSpecified"
+            android:launchMode="singleInstance" >
+        </activity>
     </application>
 
 </manifest>

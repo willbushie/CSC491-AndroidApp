@@ -2005,7 +2005,6 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id buttonPanel
-id button_Share
 id button_edit
 id button_join
 id button_leave
@@ -2015,6 +2014,7 @@ id button_pause
 id button_preferences
 id button_profile
 id button_settings
+id button_share
 id button_start
 id button_timeline
 id button_update_email

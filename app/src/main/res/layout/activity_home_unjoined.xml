@@ -106,6 +106,7 @@
                 android:minLines="2"
                 android:text="@string/button_text_settings"
                 android:textSize="22sp"
+                android:onClick="openSettings"
                 app:icon="@drawable/ic_baseline_settings_24"
                 app:iconGravity="textTop"
                 app:iconSize="75dp" />
