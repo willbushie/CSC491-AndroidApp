@@ -5,7 +5,9 @@ import java.net.URL;
 import java.util.Scanner;
 
 public class APIHandler {
-
+    /*
+    This class will handle all API connection & communication.
+     */
 
     public static void main(String[] args) {
         testAPIConnection();
