@@ -37,6 +37,7 @@ public class ActivitySettingsHome extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ActivitySettingsHome.this, ActivitySettingsNotifications.class);
+                startActivity(intent);
             }
         });
 
@@ -46,6 +47,7 @@ public class ActivitySettingsHome extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ActivitySettingsHome.this, ActivitySettingsPreferences.class);
+                startActivity(intent);
             }
         });
     }
