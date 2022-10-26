@@ -1,3 +1,38 @@
 <resources>
+    <!-- All Application Strings -->
     <string name="app_name">PhotoShare</string>
+    <string name="title_activity_settings_home">activity_settings_home</string>
+    <!-- All Button Text Strings -->
+    <string name="button_text_start">Start</string>
+    <string name="button_text_timeline">Timeline</string>
+    <string name="button_text_join">Join</string>
+    <string name="button_text_settings">Settings</string>
+    <string name="button_text_share">Share</string>
+    <string name="button_text_leave">Leave</string>
+    <string name="button_text_edit">Edit</string>
+    <string name="button_text_pause">Pause</string>
+    <!-- Settings Related Strings -->
+    <string name="button_text_settings_profile">Profile</string>
+    <string name="button_text_settings_notifications">Notifications</string>
+    <string name="button_text_settings_preferences">Preferences</string>
+    <string name="button_text_settings_update_email">Update Email</string>
+    <string name="button_text_settings_update_password">Update Password</string>
+    <string name="button_text_settings_logout">Logout</string>
+    <!-- All Timeline Related Strings -->
+
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
 </resources>
