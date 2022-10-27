@@ -23,7 +23,7 @@
     <LinearLayout
         android:id="@+id/layout_button_table"
         android:layout_width="383dp"
-        android:layout_height="573dp"
+        android:layout_height="600dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

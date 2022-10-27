@@ -22,14 +22,14 @@
     <!-- Button Layout (Unjoined) -->
     <LinearLayout
         android:id="@+id/layout_button_table"
-        android:layout_width="392dp"
-        android:layout_height="587dp"
+        android:layout_width="386dp"
+        android:layout_height="602dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="@+id/text_app_name">
 
         <!-- Button Layout - Row 1 -->
         <TableRow
