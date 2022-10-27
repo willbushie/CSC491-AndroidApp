@@ -11,38 +11,46 @@
         android:theme="@style/Theme.PhotoShare">
 
         <activity android:name=".ActivityHomeUnjoined"
-            android:launchMode="singleInstance">
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".ActivitySettingsHome"
-            android:launchMode="singleInstance">
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".ActivitySettingsProfile"
-            android:launchMode="singleInstance">
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".ActivitySettingsNotifications"
-            android:launchMode="singleInstance">
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".ActivityTimelineHome"
-            android:launchMode="singleInstance">
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".ActivitySettingsPreferences"
-            android:launchMode="singleInstance">
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".ActivityHomeJoined"
-            android:launchMode="singleInstance">
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".ActivityTimelineSpecified"
-            android:launchMode="singleInstance">
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait">
 
         </activity>
 

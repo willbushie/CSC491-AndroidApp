@@ -21,7 +21,8 @@
         android:theme="@style/Theme.PhotoShare" >
         <activity
             android:name="com.example.photoshare.ActivityHomeUnjoined"
-            android:launchMode="singleInstance" >
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,31 +31,38 @@
         </activity>
         <activity
             android:name="com.example.photoshare.ActivitySettingsHome"
-            android:launchMode="singleInstance" >
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.example.photoshare.ActivitySettingsProfile"
-            android:launchMode="singleInstance" >
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.example.photoshare.ActivitySettingsNotifications"
-            android:launchMode="singleInstance" >
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.example.photoshare.ActivityTimelineHome"
-            android:launchMode="singleInstance" >
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.example.photoshare.ActivitySettingsPreferences"
-            android:launchMode="singleInstance" >
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.example.photoshare.ActivityHomeJoined"
-            android:launchMode="singleInstance" >
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.example.photoshare.ActivityTimelineSpecified"
-            android:launchMode="singleInstance" >
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
         </activity>
     </application>
 
