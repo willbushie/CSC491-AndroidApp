@@ -29,7 +29,6 @@ public class ActivityHomeJoined extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ActivityHomeJoined.this, ActivityHomeUnjoined.class));
-                onStop();
             }
         });
 
