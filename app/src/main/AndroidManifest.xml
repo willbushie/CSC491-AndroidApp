@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PhotoShare">
 
+        <!-- MAIN ACTIVITY (1): HOME UNJOINED -->
         <activity android:name=".ActivityHomeUnjoined"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait">
@@ -17,43 +18,61 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".ActivitySettingsHome"
-            android:launchMode="singleInstance"
-            android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".ActivitySettingsProfile"
-            android:launchMode="singleInstance"
-            android:screenOrientation="portrait">
 
-        </activity>
-        <activity android:name=".ActivitySettingsNotifications"
-            android:launchMode="singleInstance"
-            android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".ActivityTimelineHome"
-            android:launchMode="singleInstance"
-            android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".ActivitySettingsPreferences"
-            android:launchMode="singleInstance"
-            android:screenOrientation="portrait">
-
-        </activity>
+        <!-- MAIN ACTIVITY (2): HOME JOINED -->
         <activity android:name=".ActivityHomeJoined"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".ActivityTimelineSpecified"
+
+        <!-- SETTINGS HOME -->
+        <activity android:name=".ActivitySettingsHome"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait">
 
         </activity>
 
+        <!-- PROFILE SETTINGS -->
+        <activity android:name=".ActivitySettingsProfile"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ActivitySettingsHome">
+
+        </activity>
+
+        <!-- NOTIFICATION SETTINGS -->
+        <activity android:name=".ActivitySettingsNotifications"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ActivitySettingsHome">
+
+        </activity>
+
+        <!-- PREFERENCES SETTINGS -->
+        <activity android:name=".ActivitySettingsPreferences"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ActivitySettingsHome">
+
+        </activity>
+
+        <!-- TIMELINE HOME -->
+        <activity android:name=".ActivityTimelineHome"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <!-- TIMELINE SPECIFIED -->
+        <activity android:name=".ActivityTimelineSpecified"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ActivityTimelineHome">
+
+        </activity>
 
     </application>
 
