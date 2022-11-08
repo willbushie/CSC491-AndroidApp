@@ -32,16 +32,6 @@ public class ActivityHomeJoined extends AppCompatActivity {
             }
         });
 
-        // Initialize Timeline Button
-        // MODIFY THIS TO OPEN TO THE CURRENT GROUP SHARE TIMELINE PAGE (does not currently exist)
-        Button open_current_timeline_view = (Button)findViewById(R.id.button_timeline);
-        open_current_timeline_view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ActivityHomeJoined.this, ActivityTimelineHome.class));
-            }
-        });
-
         // Initialize Settings Button
         Button open_settings_button = (Button)findViewById(R.id.button_settings);
         open_settings_button.setOnClickListener(new View.OnClickListener() {

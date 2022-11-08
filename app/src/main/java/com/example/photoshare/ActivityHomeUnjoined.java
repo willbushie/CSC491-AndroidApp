@@ -42,15 +42,6 @@ public class ActivityHomeUnjoined extends AppCompatActivity {
             }
         });
 
-        // Initialize Timeline Button
-        Button open_all_timeline_view = (Button)findViewById(R.id.button_timeline);
-        open_all_timeline_view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ActivityHomeUnjoined.this, ActivityTimelineHome.class));
-            }
-        });
-
         // Initialize Settings Button
         Button open_settings_button = (Button)findViewById(R.id.button_settings);
         open_settings_button.setOnClickListener(new View.OnClickListener() {

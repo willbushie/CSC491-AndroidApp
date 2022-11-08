@@ -59,21 +59,6 @@
 
         </activity>
 
-        <!-- TIMELINE HOME -->
-        <activity android:name=".ActivityTimelineHome"
-            android:launchMode="singleInstance"
-            android:screenOrientation="portrait">
-
-        </activity>
-
-        <!-- TIMELINE SPECIFIED -->
-        <activity android:name=".ActivityTimelineSpecified"
-            android:launchMode="singleInstance"
-            android:screenOrientation="portrait"
-            android:parentActivityName=".ActivityTimelineHome">
-
-        </activity>
-
     </application>
 
 </manifest>

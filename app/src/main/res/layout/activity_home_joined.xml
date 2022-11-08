@@ -80,24 +80,6 @@
             android:paddingTop="25dp"
             android:paddingBottom="25dp">
 
-            <!-- Timeline Button -->
-            <Button
-                android:id="@+id/button_timeline"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:minLines="2"
-                android:text="@string/button_text_timeline"
-                android:textSize="22sp"
-                app:icon="@drawable/ic_baseline_hourglass_bottom_24"
-                app:iconGravity="textTop"
-                app:iconSize="75dp" />
-
-            <!-- Button Spacing -->
-            <Space
-                android:id="@+id/space_buttons_row2"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content" />
-
             <!-- Settings Button -->
             <Button
                 android:id="@+id/button_settings"
@@ -109,15 +91,12 @@
                 app:icon="@drawable/ic_baseline_settings_24"
                 app:iconGravity="textTop"
                 app:iconSize="75dp" />
-        </TableRow>
 
-        <!-- Button Layout - Row 3 -->
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:paddingTop="25dp"
-            android:paddingBottom="25dp">
+            <!-- Button Spacing -->
+            <Space
+                android:id="@+id/space_buttons_row2"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" />
 
             <!-- Edit Button -->
             <Button
@@ -131,12 +110,15 @@
                 app:icon="@drawable/ic_baseline_mode_edit_24"
                 app:iconGravity="textTop"
                 app:iconSize="75dp" />
+        </TableRow>
 
-            <!-- Button Spacing -->
-            <Space
-                android:id="@+id/space_buttons_row3"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content" />
+        <!-- Button Layout - Row 3 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp">
 
             <!-- Pause Button -->
             <Button
@@ -150,7 +132,14 @@
                 app:icon="@drawable/ic_baseline_pause_24"
                 app:iconGravity="textTop"
                 app:iconSize="75dp" />
+
+            <!-- Button Spacing -->
+            <Space
+                android:id="@+id/space_buttons_row3"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
         </TableRow>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
