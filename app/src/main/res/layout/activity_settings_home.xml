@@ -22,7 +22,7 @@
     <!-- Button Layout (Settings) -->
     <LinearLayout
         android:id="@+id/layout_button_table"
-        android:layout_width="383dp"
+        android:layout_width="350dp"
         android:layout_height="600dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"

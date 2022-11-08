@@ -18,7 +18,9 @@
     <string name="button_text_settings_update_email">Update Email</string>
     <string name="button_text_settings_update_password">Update Password</string>
     <string name="button_text_settings_logout">Logout</string>
-    <!-- All Timeline Related Strings -->
+
+    <!-- Preference Settings Related Strings -->
+    <string name="switch_text_preferences_darkmode">Allow Dark Mode</string>
 
 
     <!-- Preference Titles -->

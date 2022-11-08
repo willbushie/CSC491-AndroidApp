@@ -19,6 +19,26 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.019" />
 
-    <!-- Button Layout (Settings - Preferences) -->
+    <!-- Button Layout (Preferences) -->
+    <LinearLayout
+        android:id="@+id/layout_button_table"
+        android:layout_width="350dp"
+        android:layout_height="600dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Switch - Allow Dark Mode Toggle -->
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_allow_dark_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/switch_text_preferences_darkmode" />
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
