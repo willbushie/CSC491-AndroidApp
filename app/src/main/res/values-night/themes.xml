@@ -2,15 +2,39 @@
     <!-- Base application theme. -->
     <style name="Theme.PhotoShare" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/light_black</item>
+        <item name="colorOnPrimary">@color/light_grey</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/light_grey</item>
+        <item name="colorOnSecondary">@color/dark_grey</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+
+        <!-- Base Theme Customization -->
+        <item name="android:windowBackground">@color/dark_grey</item>
+        <item name="android:textColor">@color/white</item>
+
+
+        <!-- USE OF CUSTOM DESIGNS -->
+        <item name="materialButtonStyle">@style/HomeButtonStyle</item>
+
     </style>
+
+
+
+    <!-- CUSTOM DESIGNS -->
+
+
+
+    <!-- HOME BUTTON STYLE -->
+    <style name="HomeButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="shapeAppearanceOverlay">@style/ButtonStyle_home_button</item>
+    </style>
+    <!-- Home Button Design (Shape) -->
+    <style name="ButtonStyle_home_button" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerSize">15%</item>
+    </style>
+
 </resources>
