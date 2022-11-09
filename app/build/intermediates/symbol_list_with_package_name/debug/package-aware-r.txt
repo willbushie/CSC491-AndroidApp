@@ -2016,7 +2016,6 @@ id button_profile
 id button_settings
 id button_share
 id button_start
-id button_timeline
 id button_update_email
 id button_update_password
 id cache_measures
@@ -2326,6 +2325,7 @@ id submenuarrow
 id submit_area
 id supportScrollUp
 id switchWidget
+id switch_allow_dark_mode
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -2472,8 +2472,6 @@ layout activity_settings_home
 layout activity_settings_notifications
 layout activity_settings_preferences
 layout activity_settings_profile
-layout activity_timeline_home
-layout activity_timeline_specified
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2709,6 +2707,7 @@ string search_menu_title
 string signature_title
 string status_bar_notification_info_overflow
 string summary_collapsed_preference_list
+string switch_text_preferences_darkmode
 string sync_header
 string sync_title
 string title_activity_settings_home
@@ -3041,6 +3040,7 @@ style ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year
 style ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox
 style ShapeAppearanceOverlay_TopLeftCut
 style ShapeAppearanceOverlay_TopRightDifferentCornerSize
+style SwitchWidgetStyle
 style Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day
 style Test_Theme_MaterialComponents_MaterialCalendar
 style Test_Widget_MaterialComponents_MaterialCalendar
