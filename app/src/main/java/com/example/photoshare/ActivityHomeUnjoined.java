@@ -3,10 +3,14 @@ package com.example.photoshare;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
 import android.os.Bundle;
+import android.widget.PopupMenu;
+import android.widget.Toast;
 
 
 public class ActivityHomeUnjoined extends AppCompatActivity {
@@ -38,7 +42,23 @@ public class ActivityHomeUnjoined extends AppCompatActivity {
         join_group_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ActivityHomeUnjoined.this, ActivityHomeJoined.class));
+                // popup menu to show joining options
+                PopupMenu joinOptions = new PopupMenu(ActivityHomeUnjoined.this, join_group_button);
+                joinOptions.getMenuInflater().inflate(R.menu.menu_join, joinOptions.getMenu());
+                joinOptions.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        if (item.getItemId() == R.id.menu_item_scanQRcode || item.getItemId() == R.id.menu_item_enterLink) {
+                            Toast.makeText(ActivityHomeUnjoined.this, "Joining Group...", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(ActivityHomeUnjoined.this, ActivityHomeJoined.class));
+                        }
+                        else if (item.getItemId() == R.id.menu_item_cancel) {
+                            Toast.makeText(ActivityHomeUnjoined.this, "Canceled", Toast.LENGTH_SHORT).show();
+                        }
+                        return true;
+                    }
+                });
+                joinOptions.show();
             }
         });
 
