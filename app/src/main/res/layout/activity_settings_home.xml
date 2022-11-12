@@ -20,6 +20,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.019" />
 
+    <!-- Profile Button -->
+    <Button
+        android:id="@+id/button_close"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:onClick="close_settings"
+        app:icon="@drawable/ic_baseline_close_24"
+        app:iconGravity="start"
+        app:iconSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <!-- Button Layout (Settings) -->
     <LinearLayout
         android:id="@+id/layout_button_table"

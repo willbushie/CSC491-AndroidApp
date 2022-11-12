@@ -52,4 +52,11 @@ public class ActivitySettingsHome extends AppCompatActivity {
         });
     }
 
+    public void close_settings(View v) {
+        /*
+        This method will close the settings home page.
+         */
+        finish();
+    }
+
 }

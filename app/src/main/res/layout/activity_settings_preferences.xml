@@ -37,7 +37,8 @@
             android:id="@+id/switch_allow_dark_mode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/switch_text_preferences_darkmode" />
+            android:text="@string/switch_text_preferences_darkmode"
+            android:visibility="gone" />
 
     </LinearLayout>
 
