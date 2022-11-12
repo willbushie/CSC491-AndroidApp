@@ -22,6 +22,7 @@
 
     <!-- Profile Button -->
     <Button
+        android:visibility="gone"
         android:id="@+id/button_close"
         android:layout_width="50dp"
         android:layout_height="50dp"
