@@ -9,10 +9,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ActivityHomeJoined extends AppCompatActivity {
 
+    boolean paused;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_joined);
+        paused = false;
         initializeAllButtons();
     }
 
@@ -77,6 +80,19 @@ public class ActivityHomeJoined extends AppCompatActivity {
         This action is conducted when button_pause is tapped.
          */
         Button button_pause = (Button)findViewById(R.id.button_pause);
+        if (!paused) {
+            paused = true;
+            button_pause.setText(R.string.button_text_resume);
+            button_pause.setBackgroundColor(getColor(R.color.easy_red));
+            button_pause.setCompoundDrawablesRelativeWithIntrinsicBounds(0, R.drawable.ic_baseline_play_arrow_24, 0, 0);
+        }
+        else if (paused) {
+            paused = false;
+            button_pause.setText(R.string.button_text_pause);
+            button_pause.setBackgroundColor(getColor(R.color.easy_green));
+            button_pause.setCompoundDrawablesRelativeWithIntrinsicBounds(0, R.drawable.ic_baseline_pause_24, 0, 0);
+        }
+
 
     }
 

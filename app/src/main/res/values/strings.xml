@@ -11,6 +11,8 @@
     <string name="button_text_leave">Leave</string>
     <string name="button_text_edit">Edit</string>
     <string name="button_text_pause">Pause</string>
+    <string name="button_text_resume">Resume</string>
+
     <!-- Settings Related Strings -->
     <string name="button_text_settings_profile">Profile</string>
     <string name="button_text_settings_notifications">Notifications</string>

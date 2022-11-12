@@ -32,16 +32,20 @@
         "source": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
-    },
-    {
         "merged": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/build/intermediates/res/merged/debug/drawable_ic_baseline_email_24.xml.flat",
         "source": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/res/drawable/ic_baseline_email_24.xml"
     },
     {
+        "merged": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
         "merged": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/build/intermediates/res/merged/debug/drawable_ic_baseline_notifications_none_24.xml.flat",
         "source": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/res/drawable/ic_baseline_notifications_none_24.xml"
+    },
+    {
+        "merged": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/build/intermediates/res/merged/debug/drawable_ic_baseline_arrow_back_ios_new_24.xml.flat",
+        "source": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/res/drawable/ic_baseline_arrow_back_ios_new_24.xml"
     },
     {
         "merged": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/build/intermediates/res/merged/debug/drawable_ic_baseline_share_24.xml.flat",
@@ -60,6 +64,10 @@
         "source": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
     },
     {
+        "merged": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/build/intermediates/res/merged/debug/menu_menu_join.xml.flat",
+        "source": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/res/menu/menu_join.xml"
+    },
+    {
         "merged": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/build/intermediates/res/merged/debug/drawable_ic_baseline_settings_24.xml.flat",
         "source": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/res/drawable/ic_baseline_settings_24.xml"
     },
@@ -72,8 +80,16 @@
         "source": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
     },
     {
+        "merged": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/build/intermediates/res/merged/debug/drawable_ic_baseline_qr_code_scanner_24.xml.flat",
+        "source": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/res/drawable/ic_baseline_qr_code_scanner_24.xml"
+    },
+    {
         "merged": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/build/intermediates/res/merged/debug/layout_activity_home_joined.xml.flat",
         "source": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/res/layout/activity_home_joined.xml"
+    },
+    {
+        "merged": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/build/intermediates/res/merged/debug/drawable_ic_baseline_cancel_24.xml.flat",
+        "source": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/res/drawable/ic_baseline_cancel_24.xml"
     },
     {
         "merged": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
@@ -90,6 +106,10 @@
     {
         "merged": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/build/intermediates/res/merged/debug/drawable_ic_baseline_insert_link_24.xml.flat",
+        "source": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/res/drawable/ic_baseline_insert_link_24.xml"
     },
     {
         "merged": "/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/build/intermediates/res/merged/debug/drawable_ic_baseline_hourglass_bottom_24.xml.flat",

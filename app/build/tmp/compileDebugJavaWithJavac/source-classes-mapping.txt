@@ -8,6 +8,7 @@ com/example/photoshare/ActivityHomeUnjoined.java
  com.example.photoshare.ActivityHomeUnjoined
  com.example.photoshare.ActivityHomeUnjoined$1
  com.example.photoshare.ActivityHomeUnjoined$2
+ com.example.photoshare.ActivityHomeUnjoined$2$1
  com.example.photoshare.ActivityHomeUnjoined$3
 com/example/photoshare/ActivitySettingsNotifications.java
  com.example.photoshare.ActivitySettingsNotifications
