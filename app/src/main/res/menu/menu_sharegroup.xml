@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- This menu is for when the Share button is pressed. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_item_showQRCode"
+        android:icon="@drawable/ic_baseline_qr_code_scanner_24"
+        android:title="@string/menu_share_showQR" />
+
+    <item
+        android:id="@+id/menu_item_copyLink"
+        android:icon="@drawable/ic_baseline_insert_link_24"
+        android:title="@string/menu_share_copyLink" />
+
+    <item
+        android:id="@+id/menu_item_cancel"
+        android:icon="@drawable/ic_baseline_cancel_24"
+        android:title="@string/menu_cancel" />
+</menu>

@@ -1,11 +1,17 @@
 package com.example.photoshare;
 
 import android.app.AlertDialog;
+import android.content.ClipData;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.PopupMenu;
+import android.widget.Toast;
+import android.content.ClipboardManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -35,6 +41,38 @@ public class ActivityHomeJoined extends AppCompatActivity {
                 startActivity(new Intent(ActivityHomeJoined.this, ActivitySettingsHome.class));
             }
         });
+
+        // Initialize Share Button
+        Button share_group_button = (Button) findViewById(R.id.button_share);
+        share_group_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // popup menu to show joining options
+                PopupMenu shareOptions = new PopupMenu(ActivityHomeJoined.this, share_group_button);
+                shareOptions.getMenuInflater().inflate(R.menu.menu_sharegroup, shareOptions.getMenu());
+                shareOptions.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        if (item.getItemId() == R.id.menu_item_showQRCode) {
+                            Toast.makeText(ActivityHomeJoined.this, "Showing QR Code", Toast.LENGTH_SHORT).show();
+                        }
+                        else if (item.getItemId() == R.id.menu_item_copyLink) {
+                            Toast.makeText(ActivityHomeJoined.this, "Copied Link to Clipboard", Toast.LENGTH_SHORT).show();
+                            // this does copy text to the clipboard
+                            ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                            ClipData clip = ClipData.newPlainText("label", "This is a copy test");
+                            clipboard.setPrimaryClip(clip);
+                        }
+                        else if (item.getItemId() == R.id.menu_item_cancel) {
+                            Toast.makeText(ActivityHomeJoined.this, "Canceled", Toast.LENGTH_SHORT).show();
+                        }
+                        return true;
+                    }
+                });
+                shareOptions.show();
+            }
+        });
+
     }
 
     public void shareShareGroup(View v) {

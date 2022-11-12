@@ -79,6 +79,7 @@
 
             <!-- Notifications Button -->
             <Button
+                android:visibility="gone"
                 android:id="@+id/button_notifications"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -101,6 +102,7 @@
 
             <!-- Preferences Button -->
             <Button
+                android:visibility="gone"
                 android:id="@+id/button_preferences"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"

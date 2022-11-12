@@ -2182,8 +2182,10 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id menu_item_cancel
+id menu_item_copyLink
 id menu_item_enterLink
 id menu_item_scanQRcode
+id menu_item_showQRCode
 id message
 id middle
 id mini
@@ -2586,6 +2588,7 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu menu_join
+menu menu_sharegroup
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
@@ -2675,6 +2678,8 @@ string material_timepicker_text_input_mode_description
 string menu_cancel
 string menu_join_enterLink
 string menu_join_scanQRcode
+string menu_share_copyLink
+string menu_share_showQR
 string messages_header
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description

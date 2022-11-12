@@ -26,3 +26,5 @@ com/example/photoshare/ActivityHomeUnjoined.java
 com/example/photoshare/ActivityHomeJoined.java
  com.example.photoshare.ActivityHomeJoined
  com.example.photoshare.ActivityHomeJoined$1
+ com.example.photoshare.ActivityHomeJoined$2
+ com.example.photoshare.ActivityHomeJoined$2$1
