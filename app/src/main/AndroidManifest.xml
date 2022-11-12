@@ -12,7 +12,6 @@
 
         <!-- MAIN ACTIVITY (1): HOME UNJOINED -->
         <activity android:name=".ActivityHomeUnjoined"
-            android:launchMode="singleInstance"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,21 +22,18 @@
 
         <!-- MAIN ACTIVITY (2): HOME JOINED -->
         <activity android:name=".ActivityHomeJoined"
-            android:launchMode="singleInstance"
             android:screenOrientation="portrait">
 
         </activity>
 
         <!-- SETTINGS HOME -->
         <activity android:name=".ActivitySettingsHome"
-            android:launchMode="singleInstance"
             android:screenOrientation="portrait">
 
         </activity>
 
         <!-- PROFILE SETTINGS -->
         <activity android:name=".ActivitySettingsProfile"
-            android:launchMode="singleInstance"
             android:screenOrientation="portrait"
             android:parentActivityName=".ActivitySettingsHome">
 
@@ -45,7 +41,6 @@
 
         <!-- NOTIFICATION SETTINGS -->
         <activity android:name=".ActivitySettingsNotifications"
-            android:launchMode="singleInstance"
             android:screenOrientation="portrait"
             android:parentActivityName=".ActivitySettingsHome">
 
@@ -53,7 +48,6 @@
 
         <!-- PREFERENCES SETTINGS -->
         <activity android:name=".ActivitySettingsPreferences"
-            android:launchMode="singleInstance"
             android:screenOrientation="portrait"
             android:parentActivityName=".ActivitySettingsHome">
 

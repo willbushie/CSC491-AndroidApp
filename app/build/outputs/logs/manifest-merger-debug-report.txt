@@ -85,8 +85,6 @@ activity#com.example.photoshare.ActivityHomeUnjoined
 ADDED from /Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:14:9-22:20
 	android:screenOrientation
 		ADDED from /Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:16:13-49
-	android:launchMode
-		ADDED from /Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:15:13-48
 	android:name
 		ADDED from /Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:14:19-55
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
@@ -103,16 +101,12 @@ activity#com.example.photoshare.ActivityHomeJoined
 ADDED from /Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:25:9-29:20
 	android:screenOrientation
 		ADDED from /Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:27:13-49
-	android:launchMode
-		ADDED from /Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:26:13-48
 	android:name
 		ADDED from /Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:25:19-53
 activity#com.example.photoshare.ActivitySettingsHome
 ADDED from /Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:32:9-36:20
 	android:screenOrientation
 		ADDED from /Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:34:13-49
-	android:launchMode
-		ADDED from /Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:33:13-48
 	android:name
 		ADDED from /Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:32:19-55
 activity#com.example.photoshare.ActivitySettingsProfile
@@ -121,8 +115,6 @@ ADDED from /Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL COD
 		ADDED from /Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:41:13-49
 	android:parentActivityName
 		ADDED from /Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:42:13-63
-	android:launchMode
-		ADDED from /Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:40:13-48
 	android:name
 		ADDED from /Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:39:19-58
 activity#com.example.photoshare.ActivitySettingsNotifications

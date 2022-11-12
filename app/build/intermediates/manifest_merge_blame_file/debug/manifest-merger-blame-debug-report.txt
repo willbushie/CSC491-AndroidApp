@@ -35,82 +35,74 @@
 24-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:14:9-22:20
 25            android:name="com.example.photoshare.ActivityHomeUnjoined"
 25-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:14:19-55
-26            android:launchMode="singleInstance"
-26-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:15:13-48
-27            android:screenOrientation="portrait" >
-27-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:16:13-49
-28            <intent-filter>
-28-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:17:13-20:29
-29                <action android:name="android.intent.action.MAIN" />
-29-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:18:17-69
-29-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:18:25-66
-30
-31                <category android:name="android.intent.category.LAUNCHER" />
-31-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:19:17-77
-31-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:19:27-74
-32            </intent-filter>
-33        </activity>
-34
-35        <!-- MAIN ACTIVITY (2): HOME JOINED -->
-36        <activity
-36-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:25:9-29:20
-37            android:name="com.example.photoshare.ActivityHomeJoined"
-37-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:25:19-53
-38            android:launchMode="singleInstance"
-38-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:26:13-48
-39            android:screenOrientation="portrait" >
-39-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:27:13-49
-40        </activity>
-41
-42        <!-- SETTINGS HOME -->
-43        <activity
-43-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:32:9-36:20
-44            android:name="com.example.photoshare.ActivitySettingsHome"
-44-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:32:19-55
-45            android:launchMode="singleInstance"
-45-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:33:13-48
-46            android:screenOrientation="portrait" >
-46-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:34:13-49
-47        </activity>
-48
-49        <!-- PROFILE SETTINGS -->
-50        <activity
-50-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:39:9-44:20
-51            android:name="com.example.photoshare.ActivitySettingsProfile"
-51-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:39:19-58
-52            android:launchMode="singleInstance"
-52-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:40:13-48
-53            android:parentActivityName="com.example.photoshare.ActivitySettingsHome"
-53-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:42:13-63
-54            android:screenOrientation="portrait" >
-54-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:41:13-49
-55        </activity>
-56
-57        <!-- NOTIFICATION SETTINGS -->
-58        <activity
-58-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:47:9-52:20
-59            android:name="com.example.photoshare.ActivitySettingsNotifications"
-59-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:47:19-64
-60            android:launchMode="singleInstance"
-60-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:48:13-48
-61            android:parentActivityName="com.example.photoshare.ActivitySettingsHome"
-61-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:50:13-63
-62            android:screenOrientation="portrait" >
-62-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:49:13-49
-63        </activity>
-64
-65        <!-- PREFERENCES SETTINGS -->
-66        <activity
-66-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:55:9-60:20
-67            android:name="com.example.photoshare.ActivitySettingsPreferences"
-67-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:55:19-62
-68            android:launchMode="singleInstance"
-68-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:56:13-48
-69            android:parentActivityName="com.example.photoshare.ActivitySettingsHome"
-69-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:58:13-63
-70            android:screenOrientation="portrait" >
-70-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:57:13-49
-71        </activity>
-72    </application>
-73
-74</manifest>
+26            android:screenOrientation="portrait" >
+26-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:16:13-49
+27            <intent-filter>
+27-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:17:13-20:29
+28                <action android:name="android.intent.action.MAIN" />
+28-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:18:17-69
+28-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:18:25-66
+29
+30                <category android:name="android.intent.category.LAUNCHER" />
+30-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:19:17-77
+30-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:19:27-74
+31            </intent-filter>
+32        </activity>
+33
+34        <!-- MAIN ACTIVITY (2): HOME JOINED -->
+35        <activity
+35-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:25:9-29:20
+36            android:name="com.example.photoshare.ActivityHomeJoined"
+36-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:25:19-53
+37            android:screenOrientation="portrait" >
+37-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:27:13-49
+38        </activity>
+39
+40        <!-- SETTINGS HOME -->
+41        <activity
+41-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:32:9-36:20
+42            android:name="com.example.photoshare.ActivitySettingsHome"
+42-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:32:19-55
+43            android:screenOrientation="portrait" >
+43-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:34:13-49
+44        </activity>
+45
+46        <!-- PROFILE SETTINGS -->
+47        <activity
+47-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:39:9-44:20
+48            android:name="com.example.photoshare.ActivitySettingsProfile"
+48-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:39:19-58
+49            android:parentActivityName="com.example.photoshare.ActivitySettingsHome"
+49-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:42:13-63
+50            android:screenOrientation="portrait" >
+50-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:41:13-49
+51        </activity>
+52
+53        <!-- NOTIFICATION SETTINGS -->
+54        <activity
+54-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:47:9-52:20
+55            android:name="com.example.photoshare.ActivitySettingsNotifications"
+55-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:47:19-64
+56            android:launchMode="singleInstance"
+56-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:48:13-48
+57            android:parentActivityName="com.example.photoshare.ActivitySettingsHome"
+57-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:50:13-63
+58            android:screenOrientation="portrait" >
+58-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:49:13-49
+59        </activity>
+60
+61        <!-- PREFERENCES SETTINGS -->
+62        <activity
+62-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:55:9-60:20
+63            android:name="com.example.photoshare.ActivitySettingsPreferences"
+63-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:55:19-62
+64            android:launchMode="singleInstance"
+64-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:56:13-48
+65            android:parentActivityName="com.example.photoshare.ActivitySettingsHome"
+65-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:58:13-63
+66            android:screenOrientation="portrait" >
+66-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:57:13-49
+67        </activity>
+68    </application>
+69
+70</manifest>

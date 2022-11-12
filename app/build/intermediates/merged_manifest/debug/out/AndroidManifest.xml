@@ -23,7 +23,6 @@
         <!-- MAIN ACTIVITY (1): HOME UNJOINED -->
         <activity
             android:name="com.example.photoshare.ActivityHomeUnjoined"
-            android:launchMode="singleInstance"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,21 +34,18 @@
         <!-- MAIN ACTIVITY (2): HOME JOINED -->
         <activity
             android:name="com.example.photoshare.ActivityHomeJoined"
-            android:launchMode="singleInstance"
             android:screenOrientation="portrait" >
         </activity>
 
         <!-- SETTINGS HOME -->
         <activity
             android:name="com.example.photoshare.ActivitySettingsHome"
-            android:launchMode="singleInstance"
             android:screenOrientation="portrait" >
         </activity>
 
         <!-- PROFILE SETTINGS -->
         <activity
             android:name="com.example.photoshare.ActivitySettingsProfile"
-            android:launchMode="singleInstance"
             android:parentActivityName="com.example.photoshare.ActivitySettingsHome"
             android:screenOrientation="portrait" >
         </activity>
