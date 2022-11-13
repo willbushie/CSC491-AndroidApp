@@ -15,6 +15,8 @@ import android.content.ClipboardManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.net.URL;
+
 public class ActivityHomeJoined extends AppCompatActivity {
 
     boolean paused;
@@ -60,7 +62,7 @@ public class ActivityHomeJoined extends AppCompatActivity {
                             Toast.makeText(ActivityHomeJoined.this, "Copied Link to Clipboard", Toast.LENGTH_SHORT).show();
                             // this does copy text to the clipboard
                             ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-                            ClipData clip = ClipData.newPlainText("label", "This is a copy test");
+                            ClipData clip = ClipData.newPlainText("Share Group URL", "https://www.photoshare.com/api/group/788/join");
                             clipboard.setPrimaryClip(clip);
                         }
                         else if (item.getItemId() == R.id.menu_item_cancel) {

@@ -53,7 +53,6 @@
         <!-- NOTIFICATION SETTINGS -->
         <activity
             android:name="com.example.photoshare.ActivitySettingsNotifications"
-            android:launchMode="singleInstance"
             android:parentActivityName="com.example.photoshare.ActivitySettingsHome"
             android:screenOrientation="portrait" >
         </activity>
@@ -61,7 +60,6 @@
         <!-- PREFERENCES SETTINGS -->
         <activity
             android:name="com.example.photoshare.ActivitySettingsPreferences"
-            android:launchMode="singleInstance"
             android:parentActivityName="com.example.photoshare.ActivitySettingsHome"
             android:screenOrientation="portrait" >
         </activity>

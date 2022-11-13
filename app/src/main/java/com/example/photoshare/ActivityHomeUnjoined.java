@@ -1,12 +1,17 @@
 package com.example.photoshare;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.ClipData;
+import android.content.ClipDescription;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.content.ClipboardManager;
 
 import android.os.Bundle;
 import android.widget.PopupMenu;
@@ -48,9 +53,30 @@ public class ActivityHomeUnjoined extends AppCompatActivity {
                 joinOptions.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
-                        if (item.getItemId() == R.id.menu_item_scanQRcode || item.getItemId() == R.id.menu_item_enterLink) {
-                            Toast.makeText(ActivityHomeUnjoined.this, "Joining Group...", Toast.LENGTH_SHORT).show();
+                        if (item.getItemId() == R.id.menu_item_scanQRcode) {
+                            // open camera for qr scanning
+                            Toast.makeText(ActivityHomeUnjoined.this, "Joining Group", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(ActivityHomeUnjoined.this, ActivityHomeJoined.class));
+                        }
+                        else if (item.getItemId() == R.id.menu_item_enterLink) {
+                            // this copies text to the clipboard
+                            ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                            ClipData clip = clipboard.getPrimaryClip();
+                            if (clip != null && clip.getItemCount() > 0) {
+                                ClipData.Item clipItem = clip.getItemAt(0);
+                                String data = clipItem.getText().toString();
+                                //Toast.makeText(ActivityHomeUnjoined.this, "CLIP: " + data, Toast.LENGTH_SHORT).show();
+
+
+                                // If the data does not match a known base URL, open a text input for the user
+                                if (!data.startsWith("https://www.photoshare.com/api/group/")) {
+                                    Toast.makeText(ActivityHomeUnjoined.this, "Opening User Input", Toast.LENGTH_SHORT).show();
+                                }
+                                else {
+                                    // otherwise join the group
+                                    Toast.makeText(ActivityHomeUnjoined.this, "Joining Group", Toast.LENGTH_SHORT).show();
+                                }
+                            }
                         }
                         else if (item.getItemId() == R.id.menu_item_cancel) {
                             Toast.makeText(ActivityHomeUnjoined.this, "Canceled", Toast.LENGTH_SHORT).show();
