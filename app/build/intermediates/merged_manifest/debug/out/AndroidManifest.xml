@@ -8,6 +8,13 @@
         android:minSdkVersion="28"
         android:targetSdkVersion="30" />
 
+    <!-- Allow app to use camera (not required - urls can be entered via text) -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
     <application
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -61,6 +68,13 @@
         <activity
             android:name="com.example.photoshare.ActivitySettingsPreferences"
             android:parentActivityName="com.example.photoshare.ActivitySettingsHome"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- QR CODE SCANNER -->
+        <activity
+            android:name="com.example.photoshare.ActivityQRCodeScanner"
+            android:parentActivityName="com.example.photoshare.ActivityHomeUnjoined"
             android:screenOrientation="portrait" >
         </activity>
     </application>

@@ -2,6 +2,7 @@ package com.example.photoshare;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ClipData;
 import android.content.ClipDescription;
@@ -60,7 +61,8 @@ public class ActivityHomeUnjoined extends AppCompatActivity {
                         if (item.getItemId() == R.id.menu_item_scanQRcode) {
                             // open camera for qr scanning
                             Toast.makeText(ActivityHomeUnjoined.this, "Joining Group", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(ActivityHomeUnjoined.this, ActivityHomeJoined.class));
+                            startActivity(new Intent(ActivityHomeUnjoined.this, ActivityQRCodeScanner.class));
+                            //startActivity(new Intent(ActivityHomeUnjoined.this, ActivityHomeJoined.class));
                         }
                         else if (item.getItemId() == R.id.menu_item_enterLink) {
                             // this copies text to the clipboard

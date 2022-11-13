@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.photoshare">
 
+    <!-- Allow app to use camera (not required - urls can be entered via text) -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -50,6 +56,13 @@
         <activity android:name=".ActivitySettingsPreferences"
             android:screenOrientation="portrait"
             android:parentActivityName=".ActivitySettingsHome">
+
+        </activity>
+
+        <!-- QR CODE SCANNER -->
+        <activity android:name=".ActivityQRCodeScanner"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ActivityHomeUnjoined">
 
         </activity>
 
