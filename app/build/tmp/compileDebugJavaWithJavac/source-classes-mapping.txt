@@ -17,14 +17,14 @@ com/example/photoshare/IncomingConnectionsHandler.java
  com.example.photoshare.IncomingConnectionsHandler
 com/example/photoshare/ActivitySettingsProfile.java
  com.example.photoshare.ActivitySettingsProfile
+com/example/photoshare/ActivityHomeJoined.java
+ com.example.photoshare.ActivityHomeJoined
+ com.example.photoshare.ActivityHomeJoined$1
+ com.example.photoshare.ActivityHomeJoined$2
+ com.example.photoshare.ActivityHomeJoined$2$1
 com/example/photoshare/ActivityHomeUnjoined.java
  com.example.photoshare.ActivityHomeUnjoined
  com.example.photoshare.ActivityHomeUnjoined$1
  com.example.photoshare.ActivityHomeUnjoined$2
  com.example.photoshare.ActivityHomeUnjoined$2$1
  com.example.photoshare.ActivityHomeUnjoined$3
-com/example/photoshare/ActivityHomeJoined.java
- com.example.photoshare.ActivityHomeJoined
- com.example.photoshare.ActivityHomeJoined$1
- com.example.photoshare.ActivityHomeJoined$2
- com.example.photoshare.ActivityHomeJoined$2$1

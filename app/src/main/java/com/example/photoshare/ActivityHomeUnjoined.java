@@ -2,11 +2,14 @@ package com.example.photoshare;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.content.ClipData;
 import android.content.ClipDescription;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.text.InputType;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,6 +17,7 @@ import android.widget.Button;
 import android.content.ClipboardManager;
 
 import android.os.Bundle;
+import android.widget.EditText;
 import android.widget.PopupMenu;
 import android.widget.Toast;
 
@@ -71,6 +75,35 @@ public class ActivityHomeUnjoined extends AppCompatActivity {
                                 // If the data does not match a known base URL, open a text input for the user
                                 if (!data.startsWith("https://www.photoshare.com/api/group/")) {
                                     Toast.makeText(ActivityHomeUnjoined.this, "Opening User Input", Toast.LENGTH_SHORT).show();
+
+                                    // AlertDialog for user to enter URL - input that will pass "test"
+                                    // Once actually implemented, the API needs to be notified to 1) test the URL and 2) join the group
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(ActivityHomeUnjoined.this);
+                                    builder.setTitle("Enter Share Group URL");
+                                    EditText urlInput = new EditText(ActivityHomeUnjoined.this);
+                                    urlInput.setInputType(InputType.TYPE_CLASS_TEXT);
+                                    builder.setView(urlInput);
+
+                                    // submit URL for testing
+                                    builder.setPositiveButton("Join", (DialogInterface.OnClickListener) (dialog, which) -> {
+                                        String inputData = urlInput.getText().toString();
+                                        // test the passed URL for confirmation
+                                        if (inputData.equals("test")) {
+                                            Toast.makeText(ActivityHomeUnjoined.this, "Joining Group", Toast.LENGTH_SHORT).show();
+                                            startActivity(new Intent(ActivityHomeUnjoined.this, ActivityHomeJoined.class));
+                                        }
+                                        else {
+                                            Toast.makeText(ActivityHomeUnjoined.this, "Not a Valid Group", Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
+                                    // cancel input
+                                    builder.setNegativeButton("Cancel", (DialogInterface.OnClickListener) (dialog, which) -> {
+                                        dialog.cancel();
+                                    });
+
+                                    // Create  & show Alert dialog
+                                    AlertDialog alertDialog = builder.create();
+                                    alertDialog.show();
                                 }
                                 else {
                                     // otherwise join the group
