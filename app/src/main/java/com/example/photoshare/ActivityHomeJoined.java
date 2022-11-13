@@ -12,10 +12,8 @@ import android.widget.Button;
 import android.widget.PopupMenu;
 import android.widget.Toast;
 import android.content.ClipboardManager;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.net.URL;
 
 public class ActivityHomeJoined extends AppCompatActivity {
 
@@ -27,6 +25,15 @@ public class ActivityHomeJoined extends AppCompatActivity {
         setContentView(R.layout.activity_home_joined);
         paused = false;
         initializeAllButtons();
+    }
+
+    @Override
+    public void onBackPressed() {
+        /*
+        This overrides original onBackPressed method.
+        Ensures the user confirms before leaving a group.
+         */
+        leaveShareGroup(null);
     }
 
     public void initializeAllButtons() {
@@ -90,13 +97,10 @@ public class ActivityHomeJoined extends AppCompatActivity {
         /*
         This will join a share group.
         This action is conducted when button_join is tapped.
-
-        This button, since it will begin a new activity, needs to be initialized prior.
-        Button functionality (this method) will still work onClick.
          */
 
         AlertDialog.Builder builder = new AlertDialog.Builder(ActivityHomeJoined.this);
-        builder.setMessage("Are you sure you want to leave the group?");
+        builder.setMessage("Are you sure you want to leave the group? You will have to rejoin.");
         builder.setTitle("Are you sure?");
 
         // if confirmed
@@ -140,8 +144,6 @@ public class ActivityHomeJoined extends AppCompatActivity {
             button_pause.setBackgroundColor(getColor(R.color.easy_green));
             button_pause.setCompoundDrawablesRelativeWithIntrinsicBounds(0, R.drawable.ic_baseline_pause_24, 0, 0);
         }
-
-
     }
 
 }
