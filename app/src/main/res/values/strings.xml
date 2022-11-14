@@ -36,6 +36,8 @@
     <string name="menu_share_showQR">Show QR Code</string>
     <string name="menu_share_copyLink">Copy Share Link</string>
 
+    <!-- All Sharing Related Strings -->
+    <string name="text_share_via_qrcode">Scan the QR Code to Join</string>
 
 
     <!-- Messages Preferences -->

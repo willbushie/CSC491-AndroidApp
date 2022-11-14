@@ -2768,9 +2768,10 @@ int string summary_collapsed_preference_list 0x7f100087
 int string switch_text_preferences_darkmode 0x7f100088
 int string sync_header 0x7f100089
 int string sync_title 0x7f10008a
-int string title_activity_settings_home 0x7f10008b
-int string v7_preference_off 0x7f10008c
-int string v7_preference_on 0x7f10008d
+int string text_share_via_qrcode 0x7f10008b
+int string title_activity_settings_home 0x7f10008c
+int string v7_preference_off 0x7f10008d
+int string v7_preference_on 0x7f10008e
 int style AlertDialog_AppCompat 0x7f110000
 int style AlertDialog_AppCompat_Light 0x7f110001
 int style AndroidThemeColorAccentYellow 0x7f110002

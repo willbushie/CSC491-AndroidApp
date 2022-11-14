@@ -2769,6 +2769,7 @@ string summary_collapsed_preference_list
 string switch_text_preferences_darkmode
 string sync_header
 string sync_title
+string text_share_via_qrcode
 string title_activity_settings_home
 string v7_preference_off
 string v7_preference_on
