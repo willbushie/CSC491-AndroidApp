@@ -15,6 +15,9 @@
         android:name="android.hardware.camera"
         android:required="false" />
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -75,6 +78,13 @@
         <activity
             android:name="com.example.photoshare.ActivityQRCodeScanner"
             android:parentActivityName="com.example.photoshare.ActivityHomeUnjoined"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- QR CODE GENERATOR -->
+        <activity
+            android:name="com.example.photoshare.ActivityShareableQRCode"
+            android:parentActivityName="com.example.photoshare.ActivityHomeJoined"
             android:screenOrientation="portrait" >
         </activity>
     </application>

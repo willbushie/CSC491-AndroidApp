@@ -13,6 +13,8 @@ import android.widget.PopupMenu;
 import android.widget.Toast;
 import android.content.ClipboardManager;
 import androidx.appcompat.app.AppCompatActivity;
+import androidmads.library.qrgenearator.QRGContents;
+import androidmads.library.qrgenearator.QRGEncoder;
 
 
 public class ActivityHomeJoined extends AppCompatActivity {
@@ -64,6 +66,7 @@ public class ActivityHomeJoined extends AppCompatActivity {
                     public boolean onMenuItemClick(MenuItem item) {
                         if (item.getItemId() == R.id.menu_item_showQRCode) {
                             Toast.makeText(ActivityHomeJoined.this, "Showing QR Code", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(ActivityHomeJoined.this, ActivityShareableQRCode.class));
                         }
                         else if (item.getItemId() == R.id.menu_item_copyLink) {
                             Toast.makeText(ActivityHomeJoined.this, "Copied Link to Clipboard", Toast.LENGTH_SHORT).show();

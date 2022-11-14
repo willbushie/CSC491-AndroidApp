@@ -66,6 +66,13 @@
 
         </activity>
 
+        <!-- QR CODE GENERATOR -->
+        <activity android:name=".ActivityShareableQRCode"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ActivityHomeJoined">
+
+        </activity>
+
     </application>
 
 </manifest>

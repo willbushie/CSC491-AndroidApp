@@ -11,6 +11,6 @@
         app:autoFocusButtonColor="@color/white"
         app:autoFocusButtonVisible="true"
         app:flashButtonVisible="false"
-        app:maskColor="#60000000"/>
+        app:maskColor="#60000000" />
 
 </RelativeLayout>
