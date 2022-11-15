@@ -39,6 +39,20 @@
     <!-- All Sharing Related Strings -->
     <string name="text_share_via_qrcode">Scan the QR Code to Join</string>
 
+    <!-- All Login Related Strings -->
+    <string name="login_text_options">Login or Signup</string>
+    <string name="login_text_email">Email</string>
+    <string name="login_text_username">Username</string>
+    <string name="login_text_password">Password</string>
+    <string name="login_text_enter_password">Enter Password</string>
+    <string name="login_text_retype_password">Enter Password Again</string>
+    <string name="login_button_signup">Signup</string>
+    <string name="login_button_login">Login</string>
+    <string name="login_text_incorrect_info">Incorrect email or password</string>
+    <string name="login_text_already_exists_email">This email already exists</string>
+    <string name="login_text_already_exists_username">This username already exists</string>
+
+
 
     <!-- Messages Preferences -->
     <string name="signature_title">Your signature</string>

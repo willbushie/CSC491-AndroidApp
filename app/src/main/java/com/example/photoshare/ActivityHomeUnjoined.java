@@ -32,6 +32,17 @@ public class ActivityHomeUnjoined extends AppCompatActivity {
         initializeAllButtons();
     }
 
+    @Override
+    public void onBackPressed() {
+        /*
+        This overrides original onBackPressed method.
+        Ensures the user won't be sent to login screen & stays on home screen
+
+        ~~~ TEMPORARY SOLUTION ~~~
+            Needs to be more intuitive than this
+         */
+    }
+
     public void initializeAllButtons() {
         /*
         Initialize all buttons so they are all prepared once the activity is loaded.

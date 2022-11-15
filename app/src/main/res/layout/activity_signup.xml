@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ActivitySignup">
+
+    <!-- ImageView that will contain the application logo -->
+    <ImageView
+        android:id="@+id/imageView_app_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Text view for signup direction - is dynamic (email exists...) -->
+    <TextView
+        android:id="@+id/textView_singup_directions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/login_button_signup"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_app_logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!-- Edit Text for username input from user
+    NEED TO PREVENT MULTIPLE LINES-->
+    <EditText
+        android:id="@+id/editText_username_input"
+        android:layout_width="275dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="25sp"
+        android:background="@color/white"
+        android:hint="@string/login_text_username"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_singup_directions" />
+
+    <!-- Edit Text for email input from user
+    NEED TO PREVENT MULTIPLE LINES-->
+    <EditText
+        android:id="@+id/editText_signup_email_input"
+        android:layout_width="275dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="25sp"
+        android:background="@color/white"
+        android:hint="@string/login_text_email"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_username_input" />
+
+    <!-- Edit Text for password input from user
+    NEED TO PREVENT MULTIPLE LINES-->
+    <EditText
+        android:id="@+id/editText_signup_password_input_1"
+        android:layout_width="275dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="25sp"
+        android:background="@color/white"
+        android:hint="@string/login_text_enter_password"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_signup_email_input" />
+
+    <!-- Edit Text for password input from user
+    NEED TO PREVENT MULTIPLE LINES-->
+    <EditText
+        android:id="@+id/editText_signup_password_input_2"
+        android:layout_width="275dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="25sp"
+        android:background="@color/white"
+        android:hint="@string/login_text_retype_password"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_signup_password_input_1" />
+
+    <!-- Button for signup submission -->
+    <Button
+        android:id="@+id/button_signup"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:text="@string/login_button_signup"
+        android:textSize="20sp"
+        android:layout_marginTop="25sp"
+        android:onClick="signup"
+        app:layout_constraintTop_toBottomOf="@+id/editText_signup_password_input_2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!-- Button for cancelling -->
+    <Button
+        android:id="@+id/button_cancel_singup"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:text="@string/menu_cancel"
+        android:textSize="20sp"
+        android:layout_marginTop="25sp"
+        app:layout_constraintTop_toBottomOf="@+id/button_signup"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

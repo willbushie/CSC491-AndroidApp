@@ -34,11 +34,14 @@
         <activity
             android:name="com.example.photoshare.ActivityHomeUnjoined"
             android:screenOrientation="portrait" >
+
+            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            -->
+
         </activity>
 
         <!-- MAIN ACTIVITY (2): HOME JOINED -->
@@ -85,6 +88,27 @@
         <activity
             android:name="com.example.photoshare.ActivityShareableQRCode"
             android:parentActivityName="com.example.photoshare.ActivityHomeJoined"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!--
+        LOGIN PAGE
+        ??? -> android:parentActivityName="."
+        -->
+        <activity
+            android:name="com.example.photoshare.ActivityLogin"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- SIGNUP PAGE -->
+        <activity
+            android:name="com.example.photoshare.ActivitySignup"
+            android:parentActivityName="com.example.photoshare.ActivityLogin"
             android:screenOrientation="portrait" >
         </activity>
     </application>
