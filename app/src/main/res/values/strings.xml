@@ -48,7 +48,7 @@
     <string name="login_text_retype_password">Enter Password Again</string>
     <string name="login_button_signup">Signup</string>
     <string name="login_button_login">Login</string>
-    <string name="login_text_incorrect_info">Incorrect email or password</string>
+    <string name="login_text_incorrect_info">Incorrect username or password</string>
     <string name="login_text_already_exists_email">This email already exists</string>
     <string name="login_text_already_exists_username">This username already exists</string>
 

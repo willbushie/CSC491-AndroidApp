@@ -26,6 +26,15 @@ import com.google.zxing.WriterException;
 import androidmads.library.qrgenearator.QRGContents;
 import androidmads.library.qrgenearator.QRGEncoder;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.Scanner;
+import java.util.Map;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 
 public class ActivityHomeJoined extends AppCompatActivity {
 
@@ -142,12 +151,50 @@ public class ActivityHomeJoined extends AppCompatActivity {
         alertDialog.show();
     }
 
-    public void editShareGroup(View v) {
+    public void editShareGroup(View v) throws Exception {
         /*
         This will propose an edit to the members of the share group.
         This action is conducted when button_edit is tapped.
          */
         Button button_edit = (Button)findViewById(R.id.button_edit);
+
+        // this section crashes the activity
+        /*String url = "http://192.168.1.136:80/groups/?format=json";
+        URL obj = new URL(url);
+        StringBuffer response = new StringBuffer();
+
+        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+
+        // optional default is GET
+        con.setRequestMethod("GET");
+
+        /*int responseCode = con.getResponseCode();
+        if (responseCode != 200) {
+            response.replace(0,response.length(),"Response Code: " + responseCode);
+        }
+        else {
+            BufferedReader in = new BufferedReader(
+                    new InputStreamReader(con.getInputStream()));
+            String inputLine;
+            while ((inputLine = in.readLine()) != null) {
+                response.append(inputLine);
+            }
+            in.close();
+        }
+
+        //System.out.println(response);
+        AlertDialog.Builder builder = new AlertDialog.Builder(ActivityHomeJoined.this);
+        builder.setMessage(response);
+        builder.setTitle("Response");
+
+        // if canceled
+        builder.setNegativeButton("Close", (DialogInterface.OnClickListener) (dialog, which) -> {
+            dialog.cancel();
+        });
+
+        // Create  & show Alert dialog
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();*/
 
     }
 

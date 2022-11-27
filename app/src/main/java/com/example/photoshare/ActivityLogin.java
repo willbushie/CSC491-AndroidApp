@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,10 +42,25 @@ public class ActivityLogin extends AppCompatActivity {
         login_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                // BEFORE LAUNCHING THE ACTIVITY, ENSURE USER CAN LOGIN FIRST
-
-                startActivity(new Intent(ActivityLogin.this, ActivityHomeUnjoined.class));
+                // obtain the user inputs - check to make sure they are not blank
+                EditText username = findViewById(R.id.editText_login_username_input);
+                String username_str = username.getText().toString();
+                EditText password = findViewById(R.id.editText_login_password_input);
+                String password_str = password.getText().toString();
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        // attempt to login
+                        try {
+                            Boolean login_value = APIHandler.login(username_str, password_str);
+                            if (login_value == true) {
+                                startActivity(new Intent(ActivityLogin.this, ActivityHomeUnjoined.class));
+                            }
+                        } catch (Exception e) {
+                            //e.printStackTrace();
+                        }
+                    }
+                }).start();
             }
         });
 
@@ -57,30 +73,4 @@ public class ActivityLogin extends AppCompatActivity {
             }
         });
     }
-
-    public boolean login(View v) {
-        /*
-        This method is run when the login button is pressed.
-        The user needs to be authenticated.
-
-        ~~~ MORE SECURE MEASURES NEED TO BE TAKEN HERE ~~~
-
-         */
-
-        // obtain the user input & check with API for confirmation
-        // if confirmed, login, else notify user of problem
-
-        // get the entered email
-        EditText emailInput = findViewById(R.id.editText_login_email_input);
-        String email = emailInput.getText().toString();
-        //Toast.makeText(ActivityLogin.this, email, Toast.LENGTH_SHORT).show();
-        // get the entered password
-        EditText passInput = findViewById(R.id.editText_login_password_input);
-        String password = passInput.getText().toString();
-        //Toast.makeText(ActivityLogin.this, password, Toast.LENGTH_SHORT).show();
-
-        return false;
-
-    }
-
 }

@@ -2132,8 +2132,8 @@ id easeIn
 id easeInOut
 id easeOut
 id east
-id editText_login_email_input
 id editText_login_password_input
+id editText_login_username_input
 id editText_signup_email_input
 id editText_signup_password_input_1
 id editText_signup_password_input_2
