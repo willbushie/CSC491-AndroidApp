@@ -29,9 +29,34 @@ public class ActivitySignup extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                // BEFORE LAUNCHING ACTIVITY, ENSURE THE USER CAN BE CREATED FIRST
+                EditText username = findViewById(R.id.editText_username_input);
+                String username_str = username.getText().toString();
+                EditText email = findViewById(R.id.editText_signup_email_input);
+                String email_str = email.getText().toString();
+                EditText firstname = findViewById(R.id.editText_firstname_input);
+                String firstname_str = firstname.getText().toString();
+                EditText lastname = findViewById(R.id.editText_lastname_input);
+                String lastname_str = lastname.getText().toString();
+                EditText password = findViewById(R.id.editText_signup_password_input_1);
+                String password_str = password.getText().toString();
+                EditText password1 = findViewById(R.id.editText_signup_password_input_2);
+                String password1_str = password1.getText().toString();
 
-                startActivity(new Intent(ActivitySignup.this, ActivityHomeUnjoined.class));
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        // attempt to signup
+                        try {
+                            Boolean signup = APIHandler.register(firstname_str,lastname_str,email_str,username_str,password_str,password1_str);
+                            if (signup == true) {
+                                startActivity(new Intent(ActivitySignup.this, ActivityHomeUnjoined.class));
+                            }
+                        } catch (Exception e) {
+                            //e.printStackTrace();
+                        }
+                    }
+                }).start();
+
             }
         });
 

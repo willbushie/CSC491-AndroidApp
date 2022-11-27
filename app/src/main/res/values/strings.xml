@@ -41,6 +41,8 @@
 
     <!-- All Login Related Strings -->
     <string name="login_text_options">Login or Signup</string>
+    <string name="login_text_firstname">First Name</string>
+    <string name="login_text_lastname">Last Name</string>
     <string name="login_text_email">Email</string>
     <string name="login_text_username">Username</string>
     <string name="login_text_password">Password</string>

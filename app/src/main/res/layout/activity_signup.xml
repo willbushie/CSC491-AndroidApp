@@ -33,6 +33,34 @@
     <!-- Edit Text for username input from user
     NEED TO PREVENT MULTIPLE LINES-->
     <EditText
+        android:id="@+id/editText_firstname_input"
+        android:layout_width="275dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="25sp"
+        android:background="@color/white"
+        android:hint="@string/login_text_firstname"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_singup_directions" />
+
+    <!-- Edit Text for username input from user
+    NEED TO PREVENT MULTIPLE LINES-->
+    <EditText
+        android:id="@+id/editText_lastname_input"
+        android:layout_width="275dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="25sp"
+        android:background="@color/white"
+        android:hint="@string/login_text_lastname"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_firstname_input" />
+
+    <!-- Edit Text for username input from user
+    NEED TO PREVENT MULTIPLE LINES-->
+    <EditText
         android:id="@+id/editText_username_input"
         android:layout_width="275dp"
         android:layout_height="45dp"
@@ -42,7 +70,7 @@
         android:textSize="20sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_singup_directions" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_lastname_input" />
 
     <!-- Edit Text for email input from user
     NEED TO PREVENT MULTIPLE LINES-->

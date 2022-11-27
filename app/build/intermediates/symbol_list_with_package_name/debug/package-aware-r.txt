@@ -2132,6 +2132,8 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id editText_firstname_input
+id editText_lastname_input
 id editText_login_password_input
 id editText_login_username_input
 id editText_signup_email_input
@@ -2714,7 +2716,9 @@ string login_text_already_exists_email
 string login_text_already_exists_username
 string login_text_email
 string login_text_enter_password
+string login_text_firstname
 string login_text_incorrect_info
+string login_text_lastname
 string login_text_options
 string login_text_password
 string login_text_retype_password
