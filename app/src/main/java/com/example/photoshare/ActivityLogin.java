@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
+import org.json.JSONObject;
+import java.io.IOException;
 
 public class ActivityLogin extends AppCompatActivity {
 
@@ -13,7 +15,16 @@ public class ActivityLogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        initializeAllButtons();
+        try {
+            if (this.authenticated()) {
+                startActivity(new Intent(ActivityLogin.this, ActivityHomeUnjoined.class));
+            }
+            else {
+                initializeAllButtons();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -27,6 +38,14 @@ public class ActivityLogin extends AppCompatActivity {
          */
     }
 
+    public Boolean authenticated() throws IOException {
+        /*
+        This method will bypass the login screen, upon confirming the user is logged in.
+         */
+        FileHandler handler = new FileHandler();
+        String logged_in = handler.read(ActivityLogin.this, "logged_in");
+        return logged_in.equals("true");
+    }
 
     public void initializeAllButtons() {
         /*
@@ -51,6 +70,9 @@ public class ActivityLogin extends AppCompatActivity {
                         try {
                             Boolean login_value = APIHandler.login(ActivityLogin.this, username_str, password_str);
                             if (login_value) {
+                                FileHandler handler = new FileHandler();
+                                JSONObject logged_in = new JSONObject("{\"logged_in\":\"true\"}");
+                                handler.write(ActivityLogin.this, logged_in);
                                 startActivity(new Intent(ActivityLogin.this, ActivityHomeUnjoined.class));
                             }
                         } catch (Exception e) {

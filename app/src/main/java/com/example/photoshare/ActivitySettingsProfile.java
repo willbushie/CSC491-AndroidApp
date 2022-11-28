@@ -6,8 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
 import androidx.appcompat.app.AppCompatActivity;
+
+import org.json.JSONObject;
 
 public class ActivitySettingsProfile extends AppCompatActivity {
 
@@ -40,6 +41,9 @@ public class ActivitySettingsProfile extends AppCompatActivity {
                         public void run() {
                             try {
                                 if (APIHandler.logout(ActivitySettingsProfile.this)) {
+                                    FileHandler handler = new FileHandler();
+                                    JSONObject logged_in = new JSONObject("{\"logged_in\":\"false\"}");
+                                    handler.write(ActivitySettingsProfile.this, logged_in);
                                     startActivity(new Intent(ActivitySettingsProfile.this, ActivityLogin.class));
                                     finish();
                                 }

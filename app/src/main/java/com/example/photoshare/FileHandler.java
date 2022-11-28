@@ -4,7 +4,6 @@ import android.content.Context;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONArray;
-
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -14,10 +13,9 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Objects;
 
-
 public class FileHandler {
 
-    // class variables
+    // class variables - used for sensitive information
     private final String filename = "app_data.json";
 
     public void write(Context context, JSONObject json) throws IOException {
@@ -105,7 +103,7 @@ public class FileHandler {
             // create JSONObject to allow parsing
             JSONObject all_data = new JSONObject(sb.toString());
             String value = all_data.getString(key);
-            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Read Result: " + value);
+            //System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Read Result: " + value);
             return value;
         }
         catch (FileNotFoundException | JSONException e) {

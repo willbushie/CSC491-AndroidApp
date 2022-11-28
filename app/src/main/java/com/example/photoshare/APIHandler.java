@@ -1,7 +1,6 @@
 package com.example.photoshare;
 
 import android.app.Activity;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -10,9 +9,6 @@ import java.net.URL;
 import org.json.JSONObject;
 
 public class APIHandler {
-    /*
-    This class will handle all API connection & communication.
-     */
 
     // global variables - these are stored on device
     public static String url_base = "http://192.168.1.123:80/";

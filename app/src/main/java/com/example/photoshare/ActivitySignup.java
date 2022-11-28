@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
 import androidx.appcompat.app.AppCompatActivity;
+import org.json.JSONObject;
 
 public class ActivitySignup extends AppCompatActivity {
 
@@ -50,6 +50,9 @@ public class ActivitySignup extends AppCompatActivity {
                             Boolean signup = APIHandler.register(ActivitySignup.this, firstname_str,lastname_str,email_str,username_str,password_str,password1_str);
                             if (signup) {
                                 Boolean login = APIHandler.login(ActivitySignup.this,username_str,password_str);
+                                FileHandler handler = new FileHandler();
+                                JSONObject logged_in = new JSONObject("{\"logged_in\":\"true\"}");
+                                handler.write(ActivitySignup.this, logged_in);
                                 startActivity(new Intent(ActivitySignup.this, ActivityHomeUnjoined.class));
                             }
                         } catch (Exception e) {
