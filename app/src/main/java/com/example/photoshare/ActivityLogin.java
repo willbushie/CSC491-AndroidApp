@@ -50,11 +50,11 @@ public class ActivityLogin extends AppCompatActivity {
                         // attempt to login
                         try {
                             Boolean login_value = APIHandler.login(ActivityLogin.this, username_str, password_str);
-                            if (login_value == true) {
+                            if (login_value) {
                                 startActivity(new Intent(ActivityLogin.this, ActivityHomeUnjoined.class));
                             }
                         } catch (Exception e) {
-                            //e.printStackTrace();
+                            e.printStackTrace();
                         }
                     }
                 }).start();

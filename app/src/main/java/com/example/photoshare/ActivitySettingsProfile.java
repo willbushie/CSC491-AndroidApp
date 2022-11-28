@@ -35,8 +35,20 @@ public class ActivitySettingsProfile extends AppCompatActivity {
 
                 // if confirmed
                 builder.setPositiveButton("Yes, Logout", (DialogInterface.OnClickListener) (dialog, which) -> {
-                    startActivity(new Intent(ActivitySettingsProfile.this, ActivityLogin.class));
-                    finish();
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                if (APIHandler.logout(ActivitySettingsProfile.this)) {
+                                    startActivity(new Intent(ActivitySettingsProfile.this, ActivityLogin.class));
+                                    finish();
+                                }
+                            }
+                            catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }).start();
                 });
                 // if canceled
                 builder.setNegativeButton("Cancel", (DialogInterface.OnClickListener) (dialog, which) -> {

@@ -48,7 +48,7 @@ public class ActivitySignup extends AppCompatActivity {
                         // attempt to signup
                         try {
                             Boolean signup = APIHandler.register(ActivitySignup.this, firstname_str,lastname_str,email_str,username_str,password_str,password1_str);
-                            if (signup == true) {
+                            if (signup) {
                                 startActivity(new Intent(ActivitySignup.this, ActivityHomeUnjoined.class));
                             }
                         } catch (Exception e) {

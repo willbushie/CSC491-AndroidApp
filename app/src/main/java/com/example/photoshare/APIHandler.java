@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import org.json.JSONObject;
 
@@ -100,6 +101,38 @@ public class APIHandler {
             return false;
         }
     }
+
+    public static Boolean logout(ActivitySettingsProfile context) throws Exception {
+        /*
+        This method will logout a user - and remove on device attributes.
+         */
+        String path = "auth/logout/";
+        FileHandler handler = new FileHandler();
+
+        URL obj = new URL(url_base + path);
+        HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
+        conn.setRequestMethod("POST");
+        conn.setDoOutput(true);
+        conn.setRequestProperty("Accept", "application/json");
+        conn.setRequestProperty("Authorization", "Bearer " + handler.read(context, "access"));
+
+        String params = "refresh_token=" + handler.read(context, "refresh");
+        OutputStream os = conn.getOutputStream();
+        os.write(params.getBytes());
+        os.flush();
+        os.close();
+
+        int responseCode = conn.getResponseCode();
+
+        if (responseCode == HttpURLConnection.HTTP_RESET) {
+            return true;
+        }
+        else {
+            System.out.println("ERROR - RESPONSE CODE: " + responseCode);
+            return false;
+        }
+    }
+
 
     public static void main(String[] args) {}
 }

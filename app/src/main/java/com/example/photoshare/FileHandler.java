@@ -20,7 +20,7 @@ public class FileHandler {
     // class variables
     private final String filename = "app_data.json";
 
-    public void write(Context context, JSONObject json) throws IOException, JSONException {
+    public void write(Context context, JSONObject json) throws IOException {
         /*
         This method will write a single key/value pair.
         If it does not exist, it is created.
@@ -30,10 +30,16 @@ public class FileHandler {
 
         // read the files contents
         String contents = this.read_all(context);
-        JSONObject prev_contents = new JSONObject(contents);
+
+        JSONObject prev_contents = null;
+        try {
+            prev_contents = new JSONObject(contents);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
         //System.out.println("JSON FILE CONTENTS_1: " + prev_contents.toString());
 
-        if (contents.equals("read failed")) {
+        if (contents.equals("")) {
             // overwrite the whole file for all it matters
             FileOutputStream fos = null;
 
@@ -87,7 +93,7 @@ public class FileHandler {
         //
         FileInputStream fis = null;
         StringBuilder sb = new StringBuilder();
-        // read from the file
+        // read all data from the file
         try {
             fis = context.openFileInput(filename);
             InputStreamReader isr = new InputStreamReader(fis);
@@ -96,9 +102,13 @@ public class FileHandler {
             while ((data = br.readLine()) != null) {
                 sb.append(data);
             }
-            return sb.toString();
+            // create JSONObject to allow parsing
+            JSONObject all_data = new JSONObject(sb.toString());
+            String value = all_data.getString(key);
+            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Read Result: " + value);
+            return value;
         }
-        catch (FileNotFoundException e) {
+        catch (FileNotFoundException | JSONException e) {
             e.printStackTrace();
         }
         finally {
@@ -111,10 +121,10 @@ public class FileHandler {
                 e.printStackTrace();
             }
         }
-        return "read failed";
+        return "";
     }
 
-    public String read_all(Context context) throws IOException {
+    public String read_all(Context context) {
         String contents = "";
         InputStream inputStream = null;
         try {
@@ -156,7 +166,7 @@ public class FileHandler {
 
         // walk through the keys in obj1 and place inside of all_data
         JSONArray obj1_array = obj1.names();
-        for (int i = 0; i < obj1_array.length(); i++) {
+        for (int i = 0; i < Objects.requireNonNull(obj1_array).length(); i++) {
             // obtain both key and value pair
             String curr_key = obj1_array.getString(i);
             String curr_value = obj1.getString(curr_key);
@@ -175,6 +185,7 @@ public class FileHandler {
         //System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~OBJ2: " + obj2.toString());
         //System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~all_data: " + all_data.toString());
 
+        // return combined JSONObject
         return all_data;
     }
 
