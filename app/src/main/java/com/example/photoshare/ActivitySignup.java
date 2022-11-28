@@ -47,7 +47,7 @@ public class ActivitySignup extends AppCompatActivity {
                     public void run() {
                         // attempt to signup
                         try {
-                            Boolean signup = APIHandler.register(firstname_str,lastname_str,email_str,username_str,password_str,password1_str);
+                            Boolean signup = APIHandler.register(ActivitySignup.this, firstname_str,lastname_str,email_str,username_str,password_str,password1_str);
                             if (signup == true) {
                                 startActivity(new Intent(ActivitySignup.this, ActivityHomeUnjoined.class));
                             }
@@ -69,38 +69,6 @@ public class ActivitySignup extends AppCompatActivity {
                 //startActivity(new Intent(ActivitySignup.this, ActivityLogin.class));
             }
         });
-    }
-
-    public boolean signup(View v) {
-        /*
-        This method is run when the signup button is pressed.
-        The user needs to be created & logged into the home page
-         */
-
-        // get the entered username
-        EditText nameInput = findViewById(R.id.editText_username_input);
-        String username = nameInput.getText().toString();
-        //Toast.makeText(ActivityLogin.this, username, Toast.LENGTH_SHORT).show();
-
-        // get the entered email
-        EditText emailInput = findViewById(R.id.editText_signup_email_input);
-        String email = emailInput.getText().toString();
-        //Toast.makeText(ActivityLogin.this, email, Toast.LENGTH_SHORT).show();
-
-        // get the entered password 1
-        EditText pass1Input = findViewById(R.id.editText_signup_password_input_1);
-        String pass1 = emailInput.getText().toString();
-        //Toast.makeText(ActivityLogin.this, pass1, Toast.LENGTH_SHORT).show();
-
-        // get the entered password 2
-        EditText pass2Input = findViewById(R.id.editText_signup_password_input_2);
-        String pass2 = emailInput.getText().toString();
-        //Toast.makeText(ActivityLogin.this, pass2, Toast.LENGTH_SHORT).show();
-
-        // check for matching passwords, else notify user
-        // signup user
-
-        return false;
     }
 
 }

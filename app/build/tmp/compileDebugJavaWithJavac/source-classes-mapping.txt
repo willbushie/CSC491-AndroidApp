@@ -13,36 +13,38 @@ com/example/photoshare/ActivityHomeUnjoined.java
  com.example.photoshare.ActivityHomeUnjoined$3
 com/example/photoshare/IncomingConnectionsHandler.java
  com.example.photoshare.IncomingConnectionsHandler
-com/example/photoshare/ActivitySettingsHome.java
- com.example.photoshare.ActivitySettingsHome
- com.example.photoshare.ActivitySettingsHome$1
- com.example.photoshare.ActivitySettingsHome$2
- com.example.photoshare.ActivitySettingsHome$3
 com/example/photoshare/ActivitySettingsNotifications.java
  com.example.photoshare.ActivitySettingsNotifications
-com/example/photoshare/ActivitySettingsProfile.java
- com.example.photoshare.ActivitySettingsProfile
- com.example.photoshare.ActivitySettingsProfile$1
+com/example/photoshare/BuildConfig.java
+ com.example.photoshare.BuildConfig
+com/example/photoshare/ActivityShareableQRCode.java
+ com.example.photoshare.ActivityShareableQRCode
+com/example/photoshare/OutgoingConnectionsHandler.java
+ com.example.photoshare.OutgoingConnectionsHandler
 com/example/photoshare/ActivityHomeJoined.java
  com.example.photoshare.ActivityHomeJoined
  com.example.photoshare.ActivityHomeJoined$1
  com.example.photoshare.ActivityHomeJoined$2
  com.example.photoshare.ActivityHomeJoined$2$1
-com/example/photoshare/OutgoingConnectionsHandler.java
- com.example.photoshare.OutgoingConnectionsHandler
-com/example/photoshare/ActivityShareableQRCode.java
- com.example.photoshare.ActivityShareableQRCode
-com/example/photoshare/BuildConfig.java
- com.example.photoshare.BuildConfig
-com/example/photoshare/APIHandler.java
- com.example.photoshare.APIHandler
-com/example/photoshare/ActivitySignup.java
- com.example.photoshare.ActivitySignup
- com.example.photoshare.ActivitySignup$1
- com.example.photoshare.ActivitySignup$1$1
- com.example.photoshare.ActivitySignup$2
+com/example/photoshare/ActivitySettingsProfile.java
+ com.example.photoshare.ActivitySettingsProfile
+ com.example.photoshare.ActivitySettingsProfile$1
+com/example/photoshare/ActivitySettingsHome.java
+ com.example.photoshare.ActivitySettingsHome
+ com.example.photoshare.ActivitySettingsHome$1
+ com.example.photoshare.ActivitySettingsHome$2
+ com.example.photoshare.ActivitySettingsHome$3
 com/example/photoshare/ActivityLogin.java
  com.example.photoshare.ActivityLogin
  com.example.photoshare.ActivityLogin$1
  com.example.photoshare.ActivityLogin$1$1
  com.example.photoshare.ActivityLogin$2
+com/example/photoshare/ActivitySignup.java
+ com.example.photoshare.ActivitySignup
+ com.example.photoshare.ActivitySignup$1
+ com.example.photoshare.ActivitySignup$1$1
+ com.example.photoshare.ActivitySignup$2
+com/example/photoshare/APIHandler.java
+ com.example.photoshare.APIHandler
+com/example/photoshare/FileHandler.java
+ com.example.photoshare.FileHandler

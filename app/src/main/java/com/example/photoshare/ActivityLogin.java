@@ -5,9 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ActivityLogin extends AppCompatActivity {
@@ -52,7 +49,7 @@ public class ActivityLogin extends AppCompatActivity {
                     public void run() {
                         // attempt to login
                         try {
-                            Boolean login_value = APIHandler.login(username_str, password_str);
+                            Boolean login_value = APIHandler.login(ActivityLogin.this, username_str, password_str);
                             if (login_value == true) {
                                 startActivity(new Intent(ActivityLogin.this, ActivityHomeUnjoined.class));
                             }

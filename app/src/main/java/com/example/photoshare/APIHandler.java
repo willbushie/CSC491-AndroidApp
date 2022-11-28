@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import org.json.JSONObject;
 
 public class APIHandler {
     /*
@@ -13,10 +14,8 @@ public class APIHandler {
 
     // global variables - these are stored on device
     public static String url_base = "http://192.168.1.123:80/";
-    public static String access_token;
-    public static String refresh_token;
 
-    public static Boolean login(String username, String password) throws Exception {
+    public static Boolean login(ActivityLogin context, String username, String password) throws Exception {
         /*
         This method will login a user.
          */
@@ -47,7 +46,11 @@ public class APIHandler {
             }
             in.close();
 
-            System.out.println("RESPONSE: " + response.toString());
+            // write data to app_data.json
+            JSONObject json  = new JSONObject(response.toString());
+            FileHandler handler = new FileHandler();
+            handler.write(context, json);
+            System.out.println("RESPONSE: " + json);
             return true;
         } else {
             System.out.println("ERROR - RESPONSE CODE: " + responseCode);
@@ -55,7 +58,7 @@ public class APIHandler {
         }
     }
 
-    public static Boolean register(String firstname, String lastname, String email, String username, String password, String password2) throws Exception {
+    public static Boolean register(ActivitySignup context, String firstname, String lastname, String email, String username, String password, String password2) throws Exception {
         /*
         This method will register a new user.
          */
@@ -86,14 +89,17 @@ public class APIHandler {
             }
             in.close();
 
-            System.out.println("RESPONSE: " + response.toString());
+            // write data to app_data.json
+            JSONObject json  = new JSONObject(response.toString());
+            FileHandler handler = new FileHandler();
+            handler.write(context, json);
+            System.out.println("RESPONSE: " + json);
             return true;
         } else {
             System.out.println("ERROR - RESPONSE CODE: " + responseCode);
             return false;
         }
     }
-
 
     public static void main(String[] args) {}
 }
