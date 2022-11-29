@@ -24,6 +24,8 @@ import android.widget.Toast;
 
 import org.json.JSONObject;
 
+import java.io.IOException;
+
 
 public class ActivityHomeUnjoined extends AppCompatActivity {
 
@@ -31,7 +33,16 @@ public class ActivityHomeUnjoined extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_unjoined);
-        initializeAllButtons();
+        try {
+            if (this.joined()) {
+                startActivity(new Intent(ActivityHomeUnjoined.this, ActivityHomeJoined.class));
+            }
+            else {
+                initializeAllButtons();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -43,6 +54,15 @@ public class ActivityHomeUnjoined extends AppCompatActivity {
         ~~~ TEMPORARY SOLUTION ~~~
             Needs to be more intuitive than this
          */
+    }
+
+    public Boolean joined() throws IOException {
+        /*
+        This method will bypass the login screen, upon confirming the user is logged in.
+         */
+        FileHandler handler = new FileHandler();
+        String logged_in = handler.read(ActivityHomeUnjoined.this, "group_data.json", "groupMember");
+        return logged_in.equals("true");
     }
 
     public void initializeAllButtons() {
@@ -113,8 +133,8 @@ public class ActivityHomeUnjoined extends AppCompatActivity {
                     public boolean onMenuItemClick(MenuItem item) {
                         if (item.getItemId() == R.id.menu_item_scanQRcode) {
                             // open camera for qr scanning
-                            Toast.makeText(ActivityHomeUnjoined.this, "Joining Group", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(ActivityHomeUnjoined.this, ActivityQRCodeScanner.class));
+                            //Toast.makeText(ActivityHomeUnjoined.this, "Joining Group", Toast.LENGTH_SHORT).show();
                             //startActivity(new Intent(ActivityHomeUnjoined.this, ActivityHomeJoined.class));
                         }
                         else if (item.getItemId() == R.id.menu_item_enterLink) {
@@ -127,7 +147,8 @@ public class ActivityHomeUnjoined extends AppCompatActivity {
                                 //Toast.makeText(ActivityHomeUnjoined.this, "CLIP: " + data, Toast.LENGTH_SHORT).show();
 
                                 // If the data does not match a known base URL, open a text input for the user
-                                if (!data.startsWith("https://www.photoshare.com/api/groups/")) {
+                                String base_url = APIHandler.url_base + "groups/";
+                                if (!data.startsWith(base_url)) {
                                     Toast.makeText(ActivityHomeUnjoined.this, "Opening User Input", Toast.LENGTH_SHORT).show();
 
                                     // AlertDialog for user to enter URL - input that will pass "test"
@@ -141,14 +162,34 @@ public class ActivityHomeUnjoined extends AppCompatActivity {
                                     // submit URL for testing
                                     builder.setPositiveButton("Join", (DialogInterface.OnClickListener) (dialog, which) -> {
                                         String inputData = urlInput.getText().toString();
-                                        // test the passed URL for confirmation
-                                        if (inputData.equals("test")) {
+
+                                        // attempt to join the group
+                                        new Thread(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                try {
+                                                    if (APIHandler.groupJoin(ActivityHomeUnjoined.this, inputData)) {
+                                                        startActivity(new Intent(ActivityHomeUnjoined.this, ActivityHomeJoined.class));
+                                                    }
+                                                    else {
+                                                        // notify the user of bad group, etc.
+                                                    }
+                                                } catch (Exception e) {
+                                                    e.printStackTrace();
+                                                }
+
+                                            }
+                                        }).start();
+
+                                        // NEEDS TO BE UPDATED
+                                        /*if (inputData.equals("test")) {
                                             Toast.makeText(ActivityHomeUnjoined.this, "Joining Group", Toast.LENGTH_SHORT).show();
                                             startActivity(new Intent(ActivityHomeUnjoined.this, ActivityHomeJoined.class));
                                         }
                                         else {
                                             Toast.makeText(ActivityHomeUnjoined.this, "Not a Valid Group", Toast.LENGTH_SHORT).show();
-                                        }
+                                        }*/
+
                                     });
                                     // cancel input
                                     builder.setNegativeButton("Cancel", (DialogInterface.OnClickListener) (dialog, which) -> {
@@ -160,8 +201,27 @@ public class ActivityHomeUnjoined extends AppCompatActivity {
                                     alertDialog.show();
                                 }
                                 else {
-                                    // otherwise join the group
-                                    Toast.makeText(ActivityHomeUnjoined.this, "Joining Group", Toast.LENGTH_SHORT).show();
+
+
+                                    // attempt to join the group
+                                    new Thread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            try {
+                                                if (APIHandler.groupJoin(ActivityHomeUnjoined.this, data)) {
+                                                    startActivity(new Intent(ActivityHomeUnjoined.this, ActivityHomeJoined.class));
+                                                }
+                                                else {
+                                                    // notify the user of bad group, etc.
+                                                }
+                                            } catch (Exception e) {
+                                                e.printStackTrace();
+                                            }
+
+                                        }
+                                    }).start();
+
+                                    //Toast.makeText(ActivityHomeUnjoined.this, "Joining Group", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         }

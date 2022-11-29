@@ -27,12 +27,14 @@ import androidmads.library.qrgenearator.QRGContents;
 import androidmads.library.qrgenearator.QRGEncoder;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Scanner;
 import java.util.Map;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 
@@ -86,7 +88,7 @@ public class ActivityHomeJoined extends AppCompatActivity {
                         if (item.getItemId() == R.id.menu_item_showQRCode) {
                             //Toast.makeText(ActivityHomeJoined.this, "Showing QR Code", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(ActivityHomeJoined.this, ActivityShareableQRCode.class));
-                            /*/ This alert dialog will show the qr code (dynamically changing) - DOES NOT CURRENTLY WORK
+                            /*/ This alert dialog will show the qr code (dynamically changing)
                             AlertDialog.Builder builder = new AlertDialog.Builder(ActivityHomeJoined.this);
                             LayoutInflater factory = LayoutInflater.from(ActivityHomeJoined.this);
                             final View view = factory.inflate(R.layout.activity_shareable_qrcode, null);
@@ -103,7 +105,16 @@ public class ActivityHomeJoined extends AppCompatActivity {
                             Toast.makeText(ActivityHomeJoined.this, "Copied Link to Clipboard", Toast.LENGTH_SHORT).show();
                             // this does copy text to the clipboard
                             ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-                            ClipData clip = ClipData.newPlainText("Share Group URL", "https://www.photoshare.com/api/group/788/join");
+                            FileHandler handler = new FileHandler();
+                            String group_id = "";
+                            try {
+                                group_id = handler.read(ActivityHomeJoined.this, "group_data.json", "id");
+                                System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GROUP ID: " + group_id);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                            String base_url = APIHandler.url_base + "groups/" + group_id + "/";
+                            ClipData clip = ClipData.newPlainText("Share Group URL", base_url);
                             clipboard.setPrimaryClip(clip);
                         }
                         else if (item.getItemId() == R.id.menu_item_cancel) {
@@ -133,12 +144,21 @@ public class ActivityHomeJoined extends AppCompatActivity {
         This action is conducted when button_join is tapped.
          */
 
+        FileHandler handler = new FileHandler();
         AlertDialog.Builder builder = new AlertDialog.Builder(ActivityHomeJoined.this);
         builder.setMessage("Are you sure you want to leave the group? You will have to rejoin.");
         builder.setTitle("Are you sure?");
 
         // if confirmed
         builder.setPositiveButton("Yes, Leave", (DialogInterface.OnClickListener) (dialog, which) -> {
+            JSONObject groupMember = null;
+            try {
+                groupMember = new JSONObject("{\"groupMember\":\"false\"}");
+                handler.write(ActivityHomeJoined.this, "group_data.json", groupMember);
+            }
+            catch (IOException | JSONException e) {
+                e.printStackTrace();
+            }
             finish();
         });
         // if canceled
@@ -215,49 +235,6 @@ public class ActivityHomeJoined extends AppCompatActivity {
             button_pause.setText(R.string.button_text_pause);
             button_pause.setBackgroundColor(getColor(R.color.easy_green));
             button_pause.setCompoundDrawablesRelativeWithIntrinsicBounds(0, R.drawable.ic_baseline_pause_24, 0, 0);
-        }
-    }
-
-    public void generateQRCode() {
-        /*
-        This method will set the QR code in this view to the share URL.
-        This method does not work inside of this java file - for now a new activity is used for scanning qr codes
-         */
-
-        // variable initialization
-        ImageView qrCodeIV = findViewById(R.id.idIVQrcode);
-        Bitmap bitmap;
-        QRGEncoder qrgEncoder;
-
-        // below line is for getting the windowmanager service.
-        WindowManager manager = (WindowManager) getSystemService(WINDOW_SERVICE);
-
-        // initializing a variable for default display.
-        Display display = manager.getDefaultDisplay();
-
-        // creating a variable for point which is to be displayed in QR Code.
-        Point point = new Point();
-        display.getSize(point);
-
-        // getting width and height of a point
-        int width = point.x;
-        int height = point.y;
-
-        // generating dimension from width and height.
-        int dimen = width < height ? width : height;
-        dimen = dimen * 3 / 4;
-
-        // setting this dimensions inside our qr code encoder to generate our qr code.
-        //qrgEncoder = new QRGEncoder(dataEdt.getText().toString(), null, QRGContents.Type.TEXT, dimen);
-        qrgEncoder = new QRGEncoder("https://photoshare.com/api/group/join/788", null, QRGContents.Type.TEXT, dimen);
-        try {
-            // getting our qrcode in the form of bitmap.
-            bitmap = qrgEncoder.encodeAsBitmap();
-            // the bitmap is set inside our image view using .setimagebitmap method.
-            qrCodeIV.setImageBitmap(bitmap);
-        } catch (WriterException e) {
-            // this method is called for exception handling.
-            Log.e("Tag", e.toString());
         }
     }
 

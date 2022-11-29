@@ -9,6 +9,9 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.zxing.WriterException;
+
+import java.io.IOException;
+
 import androidmads.library.qrgenearator.QRGContents;
 import androidmads.library.qrgenearator.QRGEncoder;
 
@@ -18,10 +21,15 @@ public class ActivityShareableQRCode extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shareable_qrcode);
-        generateQRCode();
+        try {
+            generateQRCode();
+            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ATTEMPTED TO OPEN QR CODE");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-    public void generateQRCode() {
+    public void generateQRCode() throws IOException {
         /*
         This method will set the QR code in this view to the share URL
          */
@@ -49,9 +57,15 @@ public class ActivityShareableQRCode extends AppCompatActivity {
         int dimen = width < height ? width : height;
         dimen = dimen * 3 / 4;
 
+        // Obtain join_url to generate QR code
+        FileHandler handler = new FileHandler();
+        String group_id = handler.read(ActivityShareableQRCode.this, "group_data.json", "id");
+        String join_url = APIHandler.url_base + "/groups/join/" + group_id + "/";
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SHARE URL: " + join_url);
+
         // setting this dimensions inside our qr code encoder to generate our qr code.
         //qrgEncoder = new QRGEncoder(dataEdt.getText().toString(), null, QRGContents.Type.TEXT, dimen);
-        qrgEncoder = new QRGEncoder("https://photoshare.com/api/group/join/788", null, QRGContents.Type.TEXT, dimen);
+        qrgEncoder = new QRGEncoder(join_url, null, QRGContents.Type.TEXT, dimen);
         try {
             // getting our qrcode in the form of bitmap.
             bitmap = qrgEncoder.encodeAsBitmap();

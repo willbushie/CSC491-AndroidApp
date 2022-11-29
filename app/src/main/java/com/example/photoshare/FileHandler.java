@@ -89,6 +89,7 @@ public class FileHandler {
     public String read(Context context, String filename, String key) throws IOException {
         /*
         This method will read a single key/value pair.
+        IF THE KEY DOES NOT EXIST, THROW AN ERROR
          */
         //
         FileInputStream fis = null;

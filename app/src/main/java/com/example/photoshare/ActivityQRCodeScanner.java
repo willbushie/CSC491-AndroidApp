@@ -38,10 +38,29 @@ public class ActivityQRCodeScanner extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+
+                        // ATTEMPT TO JOIN BASED ON THE QR CODE SCANNED (RESULT)
+                        new Thread(new Runnable() {
+                            @Override
+                            public void run() {
+
+                                try {
+                                    if (APIHandler.groupJoin(ActivityQRCodeScanner.this,result.getText())) {
+                                        startActivity(new Intent(ActivityQRCodeScanner.this, ActivityHomeJoined.class));
+                                        finish();
+                                    }
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+
+                            }
+                        }).start();
+
+
                         // this obtains the qr code once its read - check for correctness & move to join page
                         Toast.makeText(ActivityQRCodeScanner.this, result.getText(), Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(ActivityQRCodeScanner.this, ActivityHomeJoined.class));
-                        finish();
+                        //startActivity(new Intent(ActivityQRCodeScanner.this, ActivityHomeJoined.class));
+                        //finish();
                     }
                 });
             }

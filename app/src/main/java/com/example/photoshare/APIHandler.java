@@ -11,7 +11,7 @@ import org.json.JSONObject;
 public class APIHandler {
 
     // global variables - these are stored on device
-    public static String url_base = "http://192.168.1.123:80/";
+    public static String url_base = "http://192.168.1.123:8000/";
 
     public static Boolean refresh(Activity context) throws Exception {
         /*
@@ -227,6 +227,8 @@ public class APIHandler {
             // write data to app_data.json
             JSONObject json  = new JSONObject(response.toString());
             handler.write(context, "group_data.json", json);
+            JSONObject groupMember = new JSONObject("{\"groupMember\":\"true\"}");
+            handler.write(context, "group_data.json", groupMember);
             System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GROUPCREATE RESPONSE: " + json);
             return true;
         }
@@ -238,6 +240,111 @@ public class APIHandler {
         }
         else {
             System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GROUPCREATE RESPONSE CODE: " + responseCode);
+        }
+        return false;
+    }
+
+    public static Boolean groupJoin(Activity context, String join_url) throws Exception {
+        /*
+        This method will join a group only if it is currently active.
+
+        *** THIS METHOD CURRENTLY OBTAINS GROUP INFORMATION - IF SUCCESSFUL, TRUE IS RETURNED ***
+
+         */
+
+        //String path = "groups/join/";
+        FileHandler handler = new FileHandler();
+
+        URL obj = new URL(join_url);
+        HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
+        conn.setRequestMethod("GET");
+        conn.setRequestProperty("Accept", "application/json");
+        conn.setRequestProperty("Authorization", "Bearer " + handler.read(context, "app_data.json", "access"));
+
+        int responseCode = conn.getResponseCode();
+
+        if (responseCode == HttpURLConnection.HTTP_OK) {
+            BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            String inputLine;
+            StringBuffer response = new StringBuffer();
+
+            while ((inputLine = in.readLine()) != null) {
+                response.append(inputLine);
+            }
+            in.close();
+
+            // write data to app_data.json
+            JSONObject json  = new JSONObject(response.toString());
+            handler.write(context, "group_data.json", json);
+            JSONObject groupMember = new JSONObject("{\"groupMember\":\"true\"}");
+            handler.write(context, "group_data.json", groupMember);
+            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~JOINGROUP RESPONSE: " + json);
+            return true;
+        }
+        else if (responseCode == HttpURLConnection.HTTP_UNAUTHORIZED) {
+            if (refresh(context)) {
+                groupJoin(context, join_url);
+                return true;
+            }
+        }
+        else if (responseCode == HttpURLConnection.HTTP_BAD_METHOD) {
+            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~JOINGROUP RESPONSE: " + join_url);
+        }
+        else {
+            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~JOINGROUP RESPONSE CODE: " + responseCode);
+        }
+        return false;
+    }
+
+    public static Boolean groupLeave(Activity context) throws Exception {
+        /*
+        This method will remove a member from a group.
+
+        *** THIS METHOD IS CURRENTLY NOT USED - ACTIONS ARE CONDUCTED IN ACTIVITYHOMEJOINED ***
+         */
+
+        String path = "groups/leave/";
+        FileHandler handler = new FileHandler();
+
+        URL obj = new URL(url_base + path);
+        HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
+        conn.setRequestMethod("POST");
+        conn.setDoOutput(true);
+        conn.setRequestProperty("Accept", "application/json");
+        conn.setRequestProperty("Authorization", "Bearer " + handler.read(context, "app_data.json", "access"));
+
+        // param values
+        String refresh_token = handler.read(context, "app_data.json", "refresh");
+        String admin_id = handler.read(context, "user_data.json", "id");
+
+        int responseCode = conn.getResponseCode();
+
+        if (responseCode == HttpURLConnection.HTTP_CREATED) {
+            BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            String inputLine;
+            StringBuffer response = new StringBuffer();
+
+            while ((inputLine = in.readLine()) != null) {
+                response.append(inputLine);
+            }
+            in.close();
+
+            // write data to app_data.json
+            JSONObject json  = new JSONObject(response.toString());
+            handler.write(context, "group_data.json", json);
+            JSONObject groupMember = new JSONObject("{\"groupMember\":\"true\"}");
+            handler.write(context, "group_data.json", groupMember);
+            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GROUPLEAVE RESPONSE: " + json);
+            return true;
+        }
+        else if (responseCode == HttpURLConnection.HTTP_UNAUTHORIZED) {
+            if (refresh(context)) {
+                groupLeave(context);
+                return true;
+            }
+        }
+        else {
+            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GROUPLEAVE RESPONSE CODE: " + responseCode);
         }
         return false;
     }
