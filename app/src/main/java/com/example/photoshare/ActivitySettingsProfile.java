@@ -43,7 +43,7 @@ public class ActivitySettingsProfile extends AppCompatActivity {
                                 if (APIHandler.logout(ActivitySettingsProfile.this)) {
                                     FileHandler handler = new FileHandler();
                                     JSONObject logged_in = new JSONObject("{\"logged_in\":\"false\"}");
-                                    handler.write(ActivitySettingsProfile.this, handler.app_data, logged_in);
+                                    handler.write(ActivitySettingsProfile.this, "app_data.json", logged_in);
                                     startActivity(new Intent(ActivitySettingsProfile.this, ActivityLogin.class));
                                     finish();
                                 }

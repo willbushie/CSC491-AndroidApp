@@ -52,7 +52,7 @@ public class ActivitySignup extends AppCompatActivity {
                                 Boolean login = APIHandler.login(ActivitySignup.this,username_str,password_str);
                                 FileHandler handler = new FileHandler();
                                 JSONObject logged_in = new JSONObject("{\"logged_in\":\"true\"}");
-                                handler.write(ActivitySignup.this, handler.app_data, logged_in);
+                                handler.write(ActivitySignup.this, "app_data.json", logged_in);
                                 startActivity(new Intent(ActivitySignup.this, ActivityHomeUnjoined.class));
                             }
                         } catch (Exception e) {

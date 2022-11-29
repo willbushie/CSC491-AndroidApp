@@ -16,9 +16,9 @@ import java.util.Objects;
 public class FileHandler {
 
     // filenames
-    public final String app_data = "app_data.json";
-    public final String group_data = "group_data.json";
-
+    //public final String app_data = "app_data.json";
+    //public final String group_data = "group_data.json";
+    //public final String user_data = "user_data.json";
 
     public void write(Context context, String filename, JSONObject json) throws IOException {
         /*

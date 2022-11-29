@@ -43,7 +43,7 @@ public class ActivityLogin extends AppCompatActivity {
         This method will bypass the login screen, upon confirming the user is logged in.
          */
         FileHandler handler = new FileHandler();
-        String logged_in = handler.read(ActivityLogin.this, handler.app_data, "logged_in");
+        String logged_in = handler.read(ActivityLogin.this, "app_data.json", "logged_in");
         return logged_in.equals("true");
     }
 
@@ -72,7 +72,7 @@ public class ActivityLogin extends AppCompatActivity {
                             if (login_value) {
                                 FileHandler handler = new FileHandler();
                                 JSONObject logged_in = new JSONObject("{\"logged_in\":\"true\"}");
-                                handler.write(ActivityLogin.this, handler.app_data, logged_in);
+                                handler.write(ActivityLogin.this, "app_data.json", logged_in);
                                 startActivity(new Intent(ActivityLogin.this, ActivityHomeUnjoined.class));
                             }
                         } catch (Exception e) {

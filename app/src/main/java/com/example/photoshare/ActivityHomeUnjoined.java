@@ -22,6 +22,8 @@ import android.widget.EditText;
 import android.widget.PopupMenu;
 import android.widget.Toast;
 
+import org.json.JSONObject;
+
 
 public class ActivityHomeUnjoined extends AppCompatActivity {
 
@@ -54,7 +56,47 @@ public class ActivityHomeUnjoined extends AppCompatActivity {
         start_share_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ActivityHomeUnjoined.this, ActivityHomeJoined.class));
+
+                // AlertDialog for user to enter group name
+                AlertDialog.Builder builder = new AlertDialog.Builder(ActivityHomeUnjoined.this);
+                builder.setTitle("Enter Group Name");
+                EditText nameInput = new EditText(ActivityHomeUnjoined.this);
+                nameInput.setInputType(InputType.TYPE_CLASS_TEXT);
+                builder.setView(nameInput);
+
+                // submit name for group creation
+                builder.setPositiveButton("Create", (DialogInterface.OnClickListener) (dialog, which) -> {
+                    String inputData = nameInput.getText().toString();
+
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            // create group
+                            try {
+                                if (APIHandler.groupCreate(ActivityHomeUnjoined.this, inputData)) {
+                                    startActivity(new Intent(ActivityHomeUnjoined.this, ActivityHomeJoined.class));
+                                }
+                                else {
+                                    // let user know there was an error creating the group
+                                }
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }).start();
+
+                    Toast.makeText(ActivityHomeUnjoined.this, "Creating Group", Toast.LENGTH_SHORT).show();
+                });
+                // cancel input
+                builder.setNegativeButton("Cancel", (DialogInterface.OnClickListener) (dialog, which) -> {
+                    dialog.cancel();
+                });
+
+                // Create  & show Alert dialog
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+
+                //startActivity(new Intent(ActivityHomeUnjoined.this, ActivityHomeJoined.class));
             }
         });
 
@@ -76,7 +118,7 @@ public class ActivityHomeUnjoined extends AppCompatActivity {
                             //startActivity(new Intent(ActivityHomeUnjoined.this, ActivityHomeJoined.class));
                         }
                         else if (item.getItemId() == R.id.menu_item_enterLink) {
-                            // this copies text to the clipboard
+                            // this copies from the clipboard
                             ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
                             ClipData clip = clipboard.getPrimaryClip();
                             if (clip != null && clip.getItemCount() > 0) {
@@ -84,9 +126,8 @@ public class ActivityHomeUnjoined extends AppCompatActivity {
                                 String data = clipItem.getText().toString();
                                 //Toast.makeText(ActivityHomeUnjoined.this, "CLIP: " + data, Toast.LENGTH_SHORT).show();
 
-
                                 // If the data does not match a known base URL, open a text input for the user
-                                if (!data.startsWith("https://www.photoshare.com/api/group/")) {
+                                if (!data.startsWith("https://www.photoshare.com/api/groups/")) {
                                     Toast.makeText(ActivityHomeUnjoined.this, "Opening User Input", Toast.LENGTH_SHORT).show();
 
                                     // AlertDialog for user to enter URL - input that will pass "test"
