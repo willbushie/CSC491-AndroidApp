@@ -13,6 +13,48 @@ public class APIHandler {
     // global variables - these are stored on device
     public static String url_base = "http://192.168.1.123:80/";
 
+    public static Boolean refresh(Activity context) throws Exception {
+        /*
+        This method will refresh a user's tokens when needed (if a request is denied - 401 for example).
+         */
+        String path = "auth/login/refresh/";
+
+        URL obj = new URL(url_base + path);
+        HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
+        conn.setRequestMethod("POST");
+        conn.setDoOutput(true);
+        conn.setRequestProperty("Accept", "application/json");
+
+        FileHandler handler = new FileHandler();
+        String params = "refresh=" + handler.read(context, handler.app_data, "refresh");
+        OutputStream os = conn.getOutputStream();
+        os.write(params.getBytes());
+        os.flush();
+        os.close();
+
+        int responseCode = conn.getResponseCode();
+
+        if (responseCode == HttpURLConnection.HTTP_OK) {
+            BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            String inputLine;
+            StringBuffer response = new StringBuffer();
+
+            while ((inputLine = in.readLine()) != null) {
+                response.append(inputLine);
+            }
+            in.close();
+
+            // write data to app_data.json
+            JSONObject json  = new JSONObject(response.toString());
+            handler.write(context, handler.app_data, json);
+            System.out.println("RESPONSE: " + json);
+            return true;
+        } else {
+            System.out.println("ERROR - RESPONSE CODE: " + responseCode);
+            return false;
+        }
+    }
+
     public static Boolean login(Activity context, String username, String password) throws Exception {
         /*
         This method will login a user.
@@ -47,7 +89,7 @@ public class APIHandler {
             // write data to app_data.json
             JSONObject json  = new JSONObject(response.toString());
             FileHandler handler = new FileHandler();
-            handler.write(context, json);
+            handler.write(context, handler.app_data, json);
             System.out.println("RESPONSE: " + json);
             return true;
         } else {
@@ -90,7 +132,7 @@ public class APIHandler {
             // write data to app_data.json
             JSONObject json  = new JSONObject(response.toString());
             FileHandler handler = new FileHandler();
-            handler.write(context, json);
+            handler.write(context, handler.app_data, json);
             System.out.println("RESPONSE: " + json);
             return true;
         } else {
@@ -111,9 +153,9 @@ public class APIHandler {
         conn.setRequestMethod("POST");
         conn.setDoOutput(true);
         conn.setRequestProperty("Accept", "application/json");
-        conn.setRequestProperty("Authorization", "Bearer " + handler.read(context, "access"));
+        conn.setRequestProperty("Authorization", "Bearer " + handler.read(context, handler.app_data, "access"));
 
-        String params = "refresh_token=" + handler.read(context, "refresh");
+        String params = "refresh_token=" + handler.read(context, handler.app_data, "refresh");
         OutputStream os = conn.getOutputStream();
         os.write(params.getBytes());
         os.flush();
@@ -124,10 +166,16 @@ public class APIHandler {
         if (responseCode == HttpURLConnection.HTTP_RESET) {
             return true;
         }
+        else if (responseCode == HttpURLConnection.HTTP_UNAUTHORIZED) {
+            if (refresh(context)) {
+                logout(context);
+                return true;
+            }
+        }
         else {
             System.out.println("ERROR - RESPONSE CODE: " + responseCode);
-            return false;
         }
+        return false;
     }
 
 

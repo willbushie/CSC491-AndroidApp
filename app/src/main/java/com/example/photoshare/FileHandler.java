@@ -15,10 +15,12 @@ import java.util.Objects;
 
 public class FileHandler {
 
-    // class variables - used for sensitive information
-    private final String filename = "app_data.json";
+    // filenames
+    public final String app_data = "app_data.json";
+    public final String group_data = "group_data.json";
 
-    public void write(Context context, JSONObject json) throws IOException {
+
+    public void write(Context context, String filename, JSONObject json) throws IOException {
         /*
         This method will write a single key/value pair.
         If it does not exist, it is created.
@@ -27,7 +29,7 @@ public class FileHandler {
          */
 
         // read the files contents
-        String contents = this.read_all(context);
+        String contents = this.read_all(context, filename);
 
         JSONObject prev_contents = null;
         try {
@@ -84,7 +86,7 @@ public class FileHandler {
         //System.out.println("JSON FILE CONTENTS_2: " + contents2);
     }
 
-    public String read(Context context, String key) throws IOException {
+    public String read(Context context, String filename, String key) throws IOException {
         /*
         This method will read a single key/value pair.
          */
@@ -122,7 +124,7 @@ public class FileHandler {
         return "";
     }
 
-    public String read_all(Context context) {
+    public String read_all(Context context, String filename) {
         String contents = "";
         InputStream inputStream = null;
         try {
