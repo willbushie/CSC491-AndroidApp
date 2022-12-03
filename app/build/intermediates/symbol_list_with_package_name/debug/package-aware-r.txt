@@ -2060,6 +2060,7 @@ id button_settings
 id button_share
 id button_signup
 id button_start
+id button_submit
 id button_update_password
 id button_update_profile
 id cache_measures
@@ -2139,6 +2140,9 @@ id editText_lastname_field
 id editText_lastname_input
 id editText_login_password_input
 id editText_login_username_input
+id editText_oldpass_field
+id editText_pass1_field
+id editText_pass2_field
 id editText_signup_email_input
 id editText_signup_password_input_1
 id editText_signup_password_input_2
@@ -2543,6 +2547,7 @@ layout activity_settings_home
 layout activity_settings_notifications
 layout activity_settings_preferences
 layout activity_settings_profile
+layout activity_settings_updatepassword
 layout activity_settings_updateprofile
 layout activity_shareable_qrcode
 layout activity_signup
@@ -2687,6 +2692,7 @@ string attachment_summary_on
 string attachment_title
 string bottom_sheet_behavior
 string bottomsheet_action_expand_halfway
+string button_text_changepassword
 string button_text_edit
 string button_text_join
 string button_text_leave
@@ -2807,6 +2813,9 @@ string switch_text_preferences_darkmode
 string sync_header
 string sync_title
 string text_share_via_qrcode
+string textview_text_newpassword
+string textview_text_newpassword_2
+string textview_text_oldpassword
 string textview_text_update_profile
 string title_activity_settings_home
 string v7_preference_off

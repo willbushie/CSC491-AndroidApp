@@ -2,7 +2,6 @@ package com.example.photoshare;
 
 import android.app.Activity;
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
@@ -17,6 +16,7 @@ public class APIHandler {
     public static Boolean refresh(Activity context) {
         /*
         This method will refresh a user's tokens when needed (if a request is denied - 401 for example).
+        FUTURE: READ API RESPONSE IF THERE IS AN ERROR TO NOTIFY USER
          */
         String path = "auth/login/refresh/";
 
@@ -64,6 +64,7 @@ public class APIHandler {
     public static Boolean login(Activity context, String username, String password) {
         /*
         This method will login a user.
+        FUTURE: READ API RESPONSE IF THERE IS AN ERROR TO NOTIFY USER
          */
 
         String path = "auth/login/";
@@ -113,6 +114,7 @@ public class APIHandler {
     public static Boolean register(Activity context, String firstname, String lastname, String email, String username, String password, String password2) {
         /*
         This method will register a new user.
+        FUTURE: READ API RESPONSE IF THERE IS AN ERROR TO NOTIFY USER
          */
 
         String path = "auth/register/";
@@ -166,6 +168,7 @@ public class APIHandler {
         /*
         This method will update a user's profile.
         If there is an error with the input, an HTTP 400 error is thrown.
+        FUTURE: READ API RESPONSE IF THERE IS AN ERROR TO NOTIFY USER
          */
         String path = "auth/update_profile/";
         FileHandler handler = new FileHandler();
@@ -217,22 +220,24 @@ public class APIHandler {
         return false;
     }
 
-    public static Boolean update_password(Activity context) {
+    public static Boolean update_password(Activity context, String oldpass, String newpass1, String newpass2) {
         /*
-        This method will update a user's password
+        This method will update a user's password, if successful user is returned to settings profile
+        FUTURE: READ API RESPONSE IF THERE IS AN ERROR TO NOTIFY USER
          */
-        String path = "auth/logout/";
+        String path = "auth/change_password/";
         FileHandler handler = new FileHandler();
 
         try {
-            URL obj = new URL(url_base + path);
+            String pk = handler.read(context, "user_data.json", "id");
+            URL obj = new URL(url_base + path + pk + "/");
             HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
             conn.setRequestMethod("PUT");
-            conn.setDoOutput(true);
+            //conn.setDoOutput(true);
             conn.setRequestProperty("Accept", "application/json");
             conn.setRequestProperty("Authorization", "Bearer " + handler.read(context, "app_data.json", "access"));
 
-            String params = "refresh_token=" + handler.read(context, "app_data.json", "refresh");
+            String params = "old_password=" + oldpass + "&password=" + newpass1 + "&password2=" + newpass2;
             OutputStream os = conn.getOutputStream();
             os.write(params.getBytes());
             os.flush();
@@ -240,15 +245,14 @@ public class APIHandler {
 
             int responseCode = conn.getResponseCode();
 
-            if (responseCode == HttpURLConnection.HTTP_RESET) {
+            if (responseCode == HttpURLConnection.HTTP_OK) {
                 return true;
             } else if (responseCode == HttpURLConnection.HTTP_UNAUTHORIZED) {
                 if (refresh(context)) {
-                    logout(context);
-                    return true;
+                    update_password(context, oldpass, newpass1, newpass2);
                 }
             } else {
-                System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~LOGOUT RESPONSE CODE: " + responseCode);
+                System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~UPDATE PASSWORD RESPONSE CODE: " + responseCode);
             }
         }
         catch (Exception e) {
@@ -260,6 +264,7 @@ public class APIHandler {
     public static Boolean logout(Activity context) {
         /*
         This method will logout a user - and remove on device attributes.
+        FUTURE: READ API RESPONSE IF THERE IS AN ERROR TO NOTIFY USER
          */
         String path = "auth/logout/";
         FileHandler handler = new FileHandler();
@@ -299,6 +304,7 @@ public class APIHandler {
     public static Boolean groupCreate(Activity context, String group_name) {
         /*
         This method will create a group and place all returned items into the group_data file.
+        FUTURE: READ API RESPONSE IF THERE IS AN ERROR TO NOTIFY USER
          */
 
         String path = "groups/create/";
@@ -362,6 +368,7 @@ public class APIHandler {
     public static Boolean groupJoin(Activity context, String join_url) {
         /*
         This method will join a group only if it is currently active.
+        FUTURE: READ API RESPONSE IF THERE IS AN ERROR TO NOTIFY USER
 
         *** THIS METHOD CURRENTLY OBTAINS GROUP INFORMATION - IF SUCCESSFUL, TRUE IS RETURNED ***
 
@@ -415,6 +422,7 @@ public class APIHandler {
     public static Boolean groupLeave(Activity context) {
         /*
         This method will remove a member from a group.
+        FUTURE: READ API RESPONSE IF THERE IS AN ERROR TO NOTIFY USER
 
         *** THIS METHOD IS CURRENTLY NOT USED - ACTIONS ARE CONDUCTED IN ACTIVITYHOMEJOINED ***
          */
@@ -470,6 +478,7 @@ public class APIHandler {
     public static void currentUser(Activity context) {
         /*
         This method will create a group and place all returned items into the group_data file.
+        FUTURE: READ API RESPONSE IF THERE IS AN ERROR TO NOTIFY USER
          */
 
         String path = "groups/user/";

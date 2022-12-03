@@ -1,18 +1,18 @@
 com/example/photoshare/ActivitySettingsPreferences.java
  com.example.photoshare.ActivitySettingsPreferences
-com/example/photoshare/OutgoingConnectionsHandler.java
- com.example.photoshare.OutgoingConnectionsHandler
 com/example/photoshare/ActivitySettingsHome.java
  com.example.photoshare.ActivitySettingsHome
  com.example.photoshare.ActivitySettingsHome$1
  com.example.photoshare.ActivitySettingsHome$2
  com.example.photoshare.ActivitySettingsHome$3
+com/example/photoshare/ActivitySettingsNotifications.java
+ com.example.photoshare.ActivitySettingsNotifications
 com/example/photoshare/BuildConfig.java
  com.example.photoshare.BuildConfig
 com/example/photoshare/IncomingConnectionsHandler.java
  com.example.photoshare.IncomingConnectionsHandler
-com/example/photoshare/ActivitySettingsNotifications.java
- com.example.photoshare.ActivitySettingsNotifications
+com/example/photoshare/OutgoingConnectionsHandler.java
+ com.example.photoshare.OutgoingConnectionsHandler
 com/example/photoshare/FileHandler.java
  com.example.photoshare.FileHandler
 com/example/photoshare/ActivitySettingsUpdateProfile.java
@@ -29,6 +29,9 @@ com/example/photoshare/ActivityHomeUnjoined.java
  com.example.photoshare.ActivityHomeUnjoined$2$1$1
  com.example.photoshare.ActivityHomeUnjoined$2$1$2
  com.example.photoshare.ActivityHomeUnjoined$3
+com/example/photoshare/ActivitySettingsUpdatePassword.java
+ com.example.photoshare.ActivitySettingsUpdatePassword
+ com.example.photoshare.ActivitySettingsUpdatePassword$1
 com/example/photoshare/ActivitySignup.java
  com.example.photoshare.ActivitySignup
  com.example.photoshare.ActivitySignup$1

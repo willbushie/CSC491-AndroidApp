@@ -57,6 +57,13 @@
 
         </activity>
 
+        <!-- UPDATE PASSWORD -->
+        <activity android:name=".ActivitySettingsUpdatePassword"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ActivitySettingsProfile">
+
+        </activity>
+
         <!-- NOTIFICATION SETTINGS -->
         <activity android:name=".ActivitySettingsNotifications"
             android:screenOrientation="portrait"

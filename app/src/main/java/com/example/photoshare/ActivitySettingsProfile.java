@@ -79,7 +79,7 @@ public class ActivitySettingsProfile extends AppCompatActivity {
         button_update_password.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //startActivity(new Intent(ActivitySettingsProfile.this, ActivitySettingsUpdateProfile.class));
+                startActivity(new Intent(ActivitySettingsProfile.this, ActivitySettingsUpdatePassword.class));
             }
         });
     }

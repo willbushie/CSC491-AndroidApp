@@ -74,6 +74,13 @@
             android:screenOrientation="portrait" >
         </activity>
 
+        <!-- UPDATE PASSWORD -->
+        <activity
+            android:name="com.example.photoshare.ActivitySettingsUpdatePassword"
+            android:parentActivityName="com.example.photoshare.ActivitySettingsProfile"
+            android:screenOrientation="portrait" >
+        </activity>
+
         <!-- NOTIFICATION SETTINGS -->
         <activity
             android:name="com.example.photoshare.ActivitySettingsNotifications"

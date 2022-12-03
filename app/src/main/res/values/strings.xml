@@ -22,12 +22,14 @@
     <string name="button_text_settings_update_password">Update Password</string>
     <string name="button_text_settings_logout">Logout</string>
     <string name="button_text_save_changes">Save Changes</string>
+    <string name="button_text_changepassword">Change Password</string>
     <string name="textview_text_update_profile">Update Profile</string>
-
+    <string name="textview_text_oldpassword">Old Password</string>
+    <string name="textview_text_newpassword">Enter New Password</string>
+    <string name="textview_text_newpassword_2">Enter New Password Again</string>
 
     <!-- Preference Settings Related Strings -->
     <string name="switch_text_preferences_darkmode">Allow Dark Mode</string>
-
 
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
