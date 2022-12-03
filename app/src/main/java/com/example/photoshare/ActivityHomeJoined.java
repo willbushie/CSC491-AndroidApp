@@ -107,12 +107,8 @@ public class ActivityHomeJoined extends AppCompatActivity {
                             ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
                             FileHandler handler = new FileHandler();
                             String group_id = "";
-                            try {
-                                group_id = handler.read(ActivityHomeJoined.this, "group_data.json", "id");
-                                System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GROUP ID: " + group_id);
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
+                            group_id = handler.read(ActivityHomeJoined.this, "group_data.json", "id");
+                            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GROUP ID: " + group_id);
                             String base_url = APIHandler.url_base + "groups/" + group_id + "/";
                             ClipData clip = ClipData.newPlainText("Share Group URL", base_url);
                             clipboard.setPrimaryClip(clip);
@@ -156,7 +152,7 @@ public class ActivityHomeJoined extends AppCompatActivity {
                 groupMember = new JSONObject("{\"groupMember\":\"false\"}");
                 handler.write(ActivityHomeJoined.this, "group_data.json", groupMember);
             }
-            catch (IOException | JSONException e) {
+            catch (JSONException e) {
                 e.printStackTrace();
             }
             finish();

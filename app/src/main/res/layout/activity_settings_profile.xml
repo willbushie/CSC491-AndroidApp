@@ -42,14 +42,13 @@
 
             <!-- Update Email Button -->
             <Button
-                android:id="@+id/button_update_email"
+                android:id="@+id/button_update_profile"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:minLines="2"
-                android:onClick="updateEmail"
-                android:text="@string/button_text_settings_update_email"
+                android:text="@string/button_text_settings_update_profile"
                 android:textSize="22sp"
-                app:icon="@drawable/ic_baseline_email_24"
+                app:icon="@drawable/ic_baseline_account_circle_24"
                 app:iconGravity="textTop"
                 app:iconSize="75dp" />
 
@@ -69,7 +68,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:minLines="2"
-                android:onClick="updatePassword"
                 android:text="@string/button_text_settings_update_password"
                 android:textSize="22sp"
                 app:icon="@drawable/ic_baseline_password_24"

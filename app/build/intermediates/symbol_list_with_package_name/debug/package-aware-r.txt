@@ -2060,8 +2060,8 @@ id button_settings
 id button_share
 id button_signup
 id button_start
-id button_update_email
 id button_update_password
+id button_update_profile
 id cache_measures
 id cancel_button
 id carryVelocity
@@ -2132,13 +2132,17 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id editText_email_field
+id editText_firstname_field
 id editText_firstname_input
+id editText_lastname_field
 id editText_lastname_input
 id editText_login_password_input
 id editText_login_username_input
 id editText_signup_email_input
 id editText_signup_password_input_1
 id editText_signup_password_input_2
+id editText_username_field
 id editText_username_input
 id edit_query
 id elastic
@@ -2413,6 +2417,7 @@ id textStart
 id textTop
 id textView_login_directions
 id textView_singup_directions
+id textView_update_directions
 id text_app_name
 id text_input_end_icon
 id text_input_error_icon
@@ -2538,6 +2543,7 @@ layout activity_settings_home
 layout activity_settings_notifications
 layout activity_settings_preferences
 layout activity_settings_profile
+layout activity_settings_updateprofile
 layout activity_shareable_qrcode
 layout activity_signup
 layout custom_dialog
@@ -2686,13 +2692,14 @@ string button_text_join
 string button_text_leave
 string button_text_pause
 string button_text_resume
+string button_text_save_changes
 string button_text_settings
 string button_text_settings_logout
 string button_text_settings_notifications
 string button_text_settings_preferences
 string button_text_settings_profile
-string button_text_settings_update_email
 string button_text_settings_update_password
+string button_text_settings_update_profile
 string button_text_share
 string button_text_start
 string button_text_timeline
@@ -2800,6 +2807,7 @@ string switch_text_preferences_darkmode
 string sync_header
 string sync_title
 string text_share_via_qrcode
+string textview_text_update_profile
 string title_activity_settings_home
 string v7_preference_off
 string v7_preference_on

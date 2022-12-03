@@ -50,6 +50,13 @@
 
         </activity>
 
+        <!-- UPDATE PROFILE -->
+        <activity android:name=".ActivitySettingsUpdateProfile"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ActivitySettingsProfile">
+
+        </activity>
+
         <!-- NOTIFICATION SETTINGS -->
         <activity android:name=".ActivitySettingsNotifications"
             android:screenOrientation="portrait"

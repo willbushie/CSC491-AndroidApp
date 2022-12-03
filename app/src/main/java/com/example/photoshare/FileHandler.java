@@ -16,11 +16,14 @@ import java.util.Objects;
 public class FileHandler {
 
     // filenames
+    // contains token values and logged in value
     //public final String app_data = "app_data.json";
+    // contains all data regarding current/immediate previous group
     //public final String group_data = "group_data.json";
+    // contains all user data
     //public final String user_data = "user_data.json";
 
-    public void write(Context context, String filename, JSONObject json) throws IOException {
+    public void write(Context context, String filename, JSONObject json) {
         /*
         This method will write a single key/value pair.
         If it does not exist, it is created.
@@ -46,27 +49,22 @@ public class FileHandler {
             try {
                 fos = context.openFileOutput(filename, Context.MODE_PRIVATE);
                 fos.write(json.toString().getBytes());
-            }
-            catch (FileNotFoundException e) {
+            } catch (IOException e) {
                 e.printStackTrace();
-            }
-            catch (IOException e) {
-                e.printStackTrace();
-            }
-            finally {
-                if (fos != null) {
-                    fos.close();
+            } finally {
+                try {
+                    if (fos != null) {
+                        fos.close();
+                    }
+                }
+                catch (IOException e) {
+                        e.printStackTrace();
                 }
             }
         }
         else {
             JSONObject all_data = new JSONObject();
-            try {
-                all_data = this.combine(prev_contents,json);
-            }
-            catch (JSONException e) {
-                e.printStackTrace();
-            }
+            all_data = this.combine(prev_contents,json);
 
             FileOutputStream fos = null;
 
@@ -74,11 +72,16 @@ public class FileHandler {
                 fos = context.openFileOutput(filename, Context.MODE_PRIVATE);
                 fos.write(all_data.toString().getBytes());
             }
-            catch (FileNotFoundException e) {
+            catch (IOException e) {
                 e.printStackTrace();
             } finally {
-                if (fos != null) {
-                    fos.close();
+                try {
+                    if (fos != null) {
+                        fos.close();
+                    }
+                }
+                catch (IOException e) {
+                    e.printStackTrace();
                 }
             }
         }
@@ -86,7 +89,7 @@ public class FileHandler {
         //System.out.println("JSON FILE CONTENTS_2: " + contents2);
     }
 
-    public String read(Context context, String filename, String key) throws IOException {
+    public String read(Context context, String filename, String key) {
         /*
         This method will read a single key/value pair.
         IF THE KEY DOES NOT EXIST, THROW AN ERROR
@@ -109,7 +112,7 @@ public class FileHandler {
             //System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Read Result: " + value);
             return value;
         }
-        catch (FileNotFoundException | JSONException e) {
+        catch (JSONException | IOException e) {
             e.printStackTrace();
         }
         finally {
@@ -155,7 +158,7 @@ public class FileHandler {
         return contents;
     }
 
-    public JSONObject combine(JSONObject obj1, JSONObject obj2) throws JSONException {
+    public JSONObject combine(JSONObject obj1, JSONObject obj2) {
         /*
         This method combines two JSONObjects and returns a single JSONObject
         (the combination of the two passed objections).
@@ -167,25 +170,29 @@ public class FileHandler {
 
         // walk through the keys in obj1 and place inside of all_data
         JSONArray obj1_array = obj1.names();
-        for (int i = 0; i < Objects.requireNonNull(obj1_array).length(); i++) {
-            // obtain both key and value pair
-            String curr_key = obj1_array.getString(i);
-            String curr_value = obj1.getString(curr_key);
-            // place key value pair into all_data
-            all_data.put(curr_key,curr_value);
-        }
-        // walk though the keys in obj2 and place inside of all_data (replace when necessary)
-        JSONArray obj2_array = obj2.names();
-        for (int j = 0; j < Objects.requireNonNull(obj2_array).length() ; j++) {
-            String curr_key = obj2_array.getString(j);
-            String curr_value = obj2.getString(curr_key);
-            all_data.put(curr_key, curr_value);
-        }
+        try {
+            for (int i = 0; i < Objects.requireNonNull(obj1_array).length(); i++) {
+                // obtain both key and value pair
+                String curr_key = obj1_array.getString(i);
+                String curr_value = obj1.getString(curr_key);
+                // place key value pair into all_data
+                all_data.put(curr_key, curr_value);
+            }
+            // walk though the keys in obj2 and place inside of all_data (replace when necessary)
+            JSONArray obj2_array = obj2.names();
+            for (int j = 0; j < Objects.requireNonNull(obj2_array).length(); j++) {
+                String curr_key = obj2_array.getString(j);
+                String curr_value = obj2.getString(curr_key);
+                all_data.put(curr_key, curr_value);
+            }
 
-        //System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~OBJ1: " + obj1.toString());
-        //System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~OBJ2: " + obj2.toString());
-        //System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~all_data: " + all_data.toString());
-
+            //System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~OBJ1: " + obj1.toString());
+            //System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~OBJ2: " + obj2.toString());
+            //System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~all_data: " + all_data.toString());
+        }
+        catch (JSONException e) {
+            e.printStackTrace();
+        }
         // return combined JSONObject
         return all_data;
     }

@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
-
+import org.json.JSONException;
 import org.json.JSONObject;
 
 public class ActivitySettingsProfile extends AppCompatActivity {
@@ -48,7 +48,7 @@ public class ActivitySettingsProfile extends AppCompatActivity {
                                     finish();
                                 }
                             }
-                            catch (Exception e) {
+                            catch (JSONException e) {
                                 e.printStackTrace();
                             }
                         }
@@ -64,20 +64,24 @@ public class ActivitySettingsProfile extends AppCompatActivity {
                 alertDialog.show();
             }
         });
-    }
 
-    public void updateEmail(View v) {
-        /*
-        Update a user's email.
-         */
-        Button button_update_email = (Button)findViewById(R.id.button_update_email);
-    }
+        // Initialize update Profile button
+        Button button_update_profile = (Button)findViewById(R.id.button_update_profile);
+        button_update_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ActivitySettingsProfile.this, ActivitySettingsUpdateProfile.class));
+            }
+        });
 
-    public void updatePassword(View v) {
-        /*
-        Update a user's password.
-         */
+        // Initialize update Profile button
         Button button_update_password = (Button)findViewById(R.id.button_update_password);
+        button_update_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //startActivity(new Intent(ActivitySettingsProfile.this, ActivitySettingsUpdateProfile.class));
+            }
+        });
     }
 
 }

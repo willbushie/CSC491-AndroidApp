@@ -2,6 +2,7 @@
     <!-- All Application Strings -->
     <string name="app_name">PhotoShare</string>
     <string name="title_activity_settings_home">activity_settings_home</string>
+
     <!-- All Button Text Strings -->
     <string name="button_text_start">Start</string>
     <string name="button_text_timeline">Timeline</string>
@@ -17,9 +18,12 @@
     <string name="button_text_settings_profile">Profile</string>
     <string name="button_text_settings_notifications">Notifications</string>
     <string name="button_text_settings_preferences">Preferences</string>
-    <string name="button_text_settings_update_email">Update Email</string>
+    <string name="button_text_settings_update_profile">Update Profile</string>
     <string name="button_text_settings_update_password">Update Password</string>
     <string name="button_text_settings_logout">Logout</string>
+    <string name="button_text_save_changes">Save Changes</string>
+    <string name="textview_text_update_profile">Update Profile</string>
+
 
     <!-- Preference Settings Related Strings -->
     <string name="switch_text_preferences_darkmode">Allow Dark Mode</string>
@@ -66,4 +70,5 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
 </resources>
