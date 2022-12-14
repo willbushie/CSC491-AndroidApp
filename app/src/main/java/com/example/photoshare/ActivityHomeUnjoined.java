@@ -43,6 +43,14 @@ public class ActivityHomeUnjoined extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        // new thread that will start the receiver (testing purposes)
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                IncomingConnectionsHandler.recieve();
+            }
+        }).start();
     }
 
     @Override
