@@ -20,162 +20,179 @@
 15-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:9:5-66
 15-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:9:22-64
 16
-17    <uses-feature
-17-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:11:5-13:35
-18        android:name="android.hardware.camera"
-18-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:12:9-47
-19        android:required="false" />
-19-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:13:9-33
-20
-21    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-21-->[androidmads.library.qrgenearator:QRGenearator:1.0.3] /Users/williambushie/.gradle/caches/transforms-2/files-2.1/ee31afd141fca8c45f098190ddea98fc/jetified-QRGenearator-1.0.3/AndroidManifest.xml:11:5-81
-21-->[androidmads.library.qrgenearator:QRGenearator:1.0.3] /Users/williambushie/.gradle/caches/transforms-2/files-2.1/ee31afd141fca8c45f098190ddea98fc/jetified-QRGenearator-1.0.3/AndroidManifest.xml:11:22-78
-22    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-23
-24    <application
-24-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:15:5-99:19
-25        android:allowBackup="true"
-25-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:16:9-35
-26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-26-->[androidx.core:core:1.5.0] /Users/williambushie/.gradle/caches/transforms-2/files-2.1/ec322e19e59be0ee44ce6650da9ba191/core-1.5.0/AndroidManifest.xml:24:18-86
-27        android:debuggable="true"
-28        android:extractNativeLibs="false"
-29        android:icon="@mipmap/ic_launcher"
-29-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:17:9-43
-30        android:label="@string/app_name"
-30-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:18:9-41
-31        android:roundIcon="@mipmap/ic_launcher_round"
-31-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:19:9-54
-32        android:supportsRtl="true"
-32-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:20:9-35
-33        android:testOnly="true"
-34        android:theme="@style/Theme.PhotoShare"
-34-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:22:9-48
-35        android:usesCleartextTraffic="true" >
-35-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:21:9-44
-36
-37        <!-- MAIN ACTIVITY (1): HOME UNJOINED -->
-38        <activity
-38-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:25:9-32:20
-39            android:name="com.example.photoshare.ActivityHomeUnjoined"
-39-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:25:19-55
-40            android:screenOrientation="portrait" >
-40-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:26:13-49
-41
-42            <!--
-43            <intent-filter>
-44                <action android:name="android.intent.action.MAIN" />
-45                <category android:name="android.intent.category.LAUNCHER" />
-46            </intent-filter>
-47            -->
-48
-49        </activity>
-50
-51        <!-- MAIN ACTIVITY (2): HOME JOINED -->
-52        <activity
-52-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:35:9-38:20
-53            android:name="com.example.photoshare.ActivityHomeJoined"
-53-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:35:19-53
-54            android:screenOrientation="portrait" >
-54-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:36:13-49
-55        </activity>
-56
-57        <!-- SETTINGS HOME -->
-58        <activity
-58-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:41:9-44:20
-59            android:name="com.example.photoshare.ActivitySettingsHome"
-59-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:41:19-55
-60            android:screenOrientation="portrait" >
-60-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:42:13-49
-61        </activity>
-62
-63        <!-- PROFILE SETTINGS -->
-64        <activity
-64-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:47:9-51:20
-65            android:name="com.example.photoshare.ActivitySettingsProfile"
-65-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:47:19-58
-66            android:parentActivityName="com.example.photoshare.ActivitySettingsHome"
-66-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:49:13-63
-67            android:screenOrientation="portrait" >
-67-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:48:13-49
-68        </activity>
-69
-70        <!-- NOTIFICATION SETTINGS -->
-71        <activity
-71-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:54:9-58:20
-72            android:name="com.example.photoshare.ActivitySettingsNotifications"
-72-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:54:19-64
-73            android:parentActivityName="com.example.photoshare.ActivitySettingsHome"
-73-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:56:13-63
-74            android:screenOrientation="portrait" >
-74-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:55:13-49
-75        </activity>
-76
-77        <!-- PREFERENCES SETTINGS -->
-78        <activity
-78-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:61:9-65:20
-79            android:name="com.example.photoshare.ActivitySettingsPreferences"
-79-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:61:19-62
-80            android:parentActivityName="com.example.photoshare.ActivitySettingsHome"
-80-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:63:13-63
-81            android:screenOrientation="portrait" >
-81-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:62:13-49
-82        </activity>
-83
-84        <!-- QR CODE SCANNER -->
-85        <activity
-85-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:68:9-72:20
-86            android:name="com.example.photoshare.ActivityQRCodeScanner"
-86-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:68:19-56
-87            android:parentActivityName="com.example.photoshare.ActivityHomeUnjoined"
-87-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:70:13-63
-88            android:screenOrientation="portrait" >
-88-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:69:13-49
-89        </activity>
-90
-91        <!-- QR CODE GENERATOR -->
-92        <activity
-92-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:75:9-79:20
-93            android:name="com.example.photoshare.ActivityShareableQRCode"
-93-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:75:19-58
-94            android:parentActivityName="com.example.photoshare.ActivityHomeJoined"
-94-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:77:13-61
-95            android:screenOrientation="portrait" >
-95-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:76:13-49
-96        </activity>
-97
-98        <!--
-99        LOGIN PAGE
-100        ??? -> android:parentActivityName="."
-101        -->
+17    <!-- Allow app to access images on device (required for app to function) -->
+18    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+18-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:12:5-76
+18-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:12:22-73
+19
+20    <!-- Allow app to access videos on device (required for app to function) -->
+21    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+21-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:15:5-75
+21-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:15:22-72
+22
+23    <!-- Allow app to access to read external storage on device (required for app to function) -->
+24    <uses-permission
+24-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:18:5-19:38
+25        android:name="android.permission.READ_EXTERNAL_STORAGE"
+25-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:18:22-77
+26        android:maxSdkVersion="32" />
+26-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:19:9-35
+27
+28    <uses-feature
+28-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:21:5-23:35
+29        android:name="android.hardware.camera"
+29-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:22:9-47
+30        android:required="false" />
+30-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:23:9-33
+31
+32    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+32-->[androidmads.library.qrgenearator:QRGenearator:1.0.3] /Users/williambushie/.gradle/caches/transforms-2/files-2.1/ee31afd141fca8c45f098190ddea98fc/jetified-QRGenearator-1.0.3/AndroidManifest.xml:11:5-81
+32-->[androidmads.library.qrgenearator:QRGenearator:1.0.3] /Users/williambushie/.gradle/caches/transforms-2/files-2.1/ee31afd141fca8c45f098190ddea98fc/jetified-QRGenearator-1.0.3/AndroidManifest.xml:11:22-78
+33
+34    <application
+34-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:25:5-109:19
+35        android:allowBackup="true"
+35-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:26:9-35
+36        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+36-->[androidx.core:core:1.5.0] /Users/williambushie/.gradle/caches/transforms-2/files-2.1/ec322e19e59be0ee44ce6650da9ba191/core-1.5.0/AndroidManifest.xml:24:18-86
+37        android:debuggable="true"
+38        android:extractNativeLibs="false"
+39        android:icon="@mipmap/ic_launcher"
+39-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:27:9-43
+40        android:label="@string/app_name"
+40-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:28:9-41
+41        android:roundIcon="@mipmap/ic_launcher_round"
+41-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:29:9-54
+42        android:supportsRtl="true"
+42-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:30:9-35
+43        android:testOnly="true"
+44        android:theme="@style/Theme.PhotoShare"
+44-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:32:9-48
+45        android:usesCleartextTraffic="true" >
+45-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:31:9-44
+46
+47        <!-- MAIN ACTIVITY (1): HOME UNJOINED -->
+48        <activity
+48-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:35:9-42:20
+49            android:name="com.example.photoshare.ActivityHomeUnjoined"
+49-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:35:19-55
+50            android:screenOrientation="portrait" >
+50-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:36:13-49
+51
+52            <!--
+53            <intent-filter>
+54                <action android:name="android.intent.action.MAIN" />
+55                <category android:name="android.intent.category.LAUNCHER" />
+56            </intent-filter>
+57            -->
+58
+59        </activity>
+60
+61        <!-- MAIN ACTIVITY (2): HOME JOINED -->
+62        <activity
+62-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:45:9-48:20
+63            android:name="com.example.photoshare.ActivityHomeJoined"
+63-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:45:19-53
+64            android:screenOrientation="portrait" >
+64-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:46:13-49
+65        </activity>
+66
+67        <!-- SETTINGS HOME -->
+68        <activity
+68-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:51:9-54:20
+69            android:name="com.example.photoshare.ActivitySettingsHome"
+69-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:51:19-55
+70            android:screenOrientation="portrait" >
+70-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:52:13-49
+71        </activity>
+72
+73        <!-- PROFILE SETTINGS -->
+74        <activity
+74-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:57:9-61:20
+75            android:name="com.example.photoshare.ActivitySettingsProfile"
+75-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:57:19-58
+76            android:parentActivityName="com.example.photoshare.ActivitySettingsHome"
+76-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:59:13-63
+77            android:screenOrientation="portrait" >
+77-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:58:13-49
+78        </activity>
+79
+80        <!-- NOTIFICATION SETTINGS -->
+81        <activity
+81-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:64:9-68:20
+82            android:name="com.example.photoshare.ActivitySettingsNotifications"
+82-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:64:19-64
+83            android:parentActivityName="com.example.photoshare.ActivitySettingsHome"
+83-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:66:13-63
+84            android:screenOrientation="portrait" >
+84-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:65:13-49
+85        </activity>
+86
+87        <!-- PREFERENCES SETTINGS -->
+88        <activity
+88-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:71:9-75:20
+89            android:name="com.example.photoshare.ActivitySettingsPreferences"
+89-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:71:19-62
+90            android:parentActivityName="com.example.photoshare.ActivitySettingsHome"
+90-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:73:13-63
+91            android:screenOrientation="portrait" >
+91-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:72:13-49
+92        </activity>
+93
+94        <!-- QR CODE SCANNER -->
+95        <activity
+95-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:78:9-82:20
+96            android:name="com.example.photoshare.ActivityQRCodeScanner"
+96-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:78:19-56
+97            android:parentActivityName="com.example.photoshare.ActivityHomeUnjoined"
+97-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:80:13-63
+98            android:screenOrientation="portrait" >
+98-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:79:13-49
+99        </activity>
+100
+101        <!-- QR CODE GENERATOR -->
 102        <activity
-102-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:83:9-89:20
-103            android:name="com.example.photoshare.ActivityLogin"
-103-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:83:19-48
-104            android:screenOrientation="portrait" >
-104-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:84:13-49
-105            <intent-filter>
-105-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:85:13-88:29
-106                <action android:name="android.intent.action.MAIN" />
-106-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:86:17-69
-106-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:86:25-66
+102-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:85:9-89:20
+103            android:name="com.example.photoshare.ActivityShareableQRCode"
+103-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:85:19-58
+104            android:parentActivityName="com.example.photoshare.ActivityHomeJoined"
+104-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:87:13-61
+105            android:screenOrientation="portrait" >
+105-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:86:13-49
+106        </activity>
 107
-108                <category android:name="android.intent.category.LAUNCHER" />
-108-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:87:17-77
-108-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:87:27-74
-109            </intent-filter>
-110        </activity>
-111
-112        <!-- SIGNUP PAGE -->
-113        <activity
-113-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:92:9-96:20
-114            android:name="com.example.photoshare.ActivitySignup"
-114-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:92:19-49
-115            android:parentActivityName="com.example.photoshare.ActivityLogin"
-115-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:94:13-56
-116            android:screenOrientation="portrait" >
-116-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:93:13-49
-117        </activity>
-118    </application>
-119
-120</manifest>
+108        <!--
+109        LOGIN PAGE
+110        ??? -> android:parentActivityName="."
+111        -->
+112        <activity
+112-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:93:9-99:20
+113            android:name="com.example.photoshare.ActivityLogin"
+113-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:93:19-48
+114            android:screenOrientation="portrait" >
+114-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:94:13-49
+115            <intent-filter>
+115-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:95:13-98:29
+116                <action android:name="android.intent.action.MAIN" />
+116-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:96:17-69
+116-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:96:25-66
+117
+118                <category android:name="android.intent.category.LAUNCHER" />
+118-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:97:17-77
+118-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:97:27-74
+119            </intent-filter>
+120        </activity>
+121
+122        <!-- SIGNUP PAGE -->
+123        <activity
+123-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:102:9-106:20
+124            android:name="com.example.photoshare.ActivitySignup"
+124-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:102:19-49
+125            android:parentActivityName="com.example.photoshare.ActivityLogin"
+125-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:104:13-56
+126            android:screenOrientation="portrait" >
+126-->/Users/williambushie/1.MyFolders/1. College/1.Fall2022/CSC491/ALL CODE/PhotoShare/app/src/main/AndroidManifest.xml:103:13-49
+127        </activity>
+128    </application>
+129
+130</manifest>

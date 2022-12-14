@@ -11,7 +11,7 @@ import org.json.JSONObject;
 public class APIHandler {
 
     // global variables - these are stored on device
-    public static String url_base = "http://192.168.1.123:8000/";
+    public static String url_base = "http://192.168.1.126:8000/";
 
     public static Boolean refresh(Activity context) throws Exception {
         /*
